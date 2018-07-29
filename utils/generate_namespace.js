@@ -114,6 +114,8 @@ fileDict.get(rootDir).forEach((fileName) => {
 });
 
 // Export all TS subdirectories.
+const exportDict = {};
+const existingNames = new Map();
 fileDict.forEach((fileNames, dirName) => {
   // Make sure this is not invoked on the root directory.
   if(dirName !== rootDir) {
@@ -121,36 +123,93 @@ fileDict.forEach((fileNames, dirName) => {
     // Remove root name, ie: 'kha' from directory name.
     splitName.shift();
     const joinedName = splitName.join('/');
-    tsFile.addImportDeclaration({
-      defaultImport: `* as ${splitName[0]}`,
-      moduleSpecifier: `./${joinedName}`
-    }) 
+    const firstName = splitName[0];
 
-    tsFile.addStatements(`export const ${splitName[0]}: \n{${
-      (() => {
-        let nameTypes = "";
-        fileNames.forEach((name) => {
-          nameTypes += `\n${name}:${splitName[0]}.${name},`
-        });
-        return nameTypes;
-      })()
-    }\n} = ${splitName[0]};`) 
-    /*
-    if(splitName.length > 1) {
-      console.log(`default as ${splitName[splitName.length - 1]}`)
-      tsFile.addExportDeclaration({
-        namedExports: [`default as ${splitName[splitName.length - 1]}`],
+    if(existingNames.has(firstName)) {
+      existingNames.get(firstName).push(`${firstName}Proxy${existingNames.get(firstName).length}`);
+
+      tsFile.addImportDeclaration({
+        defaultImport: `* as ${firstName}Proxy${existingNames.get(firstName).length}`,
         moduleSpecifier: `./${joinedName}`
+      }) 
+    } else {
+      existingNames.set(firstName, []);
+      existingNames.get(firstName).push(`${firstName}Proxy${existingNames.get(firstName).length}`);
+
+      tsFile.addImportDeclaration({
+        defaultImport: `* as ${firstName}Proxy${existingNames.get(firstName).length}`,
+        moduleSpecifier: `./${joinedName}`
+      }) 
+    }
+    
+    if(splitName.length > 1) {
+      fileNames.forEach((name) => {
+        if(exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`]) {
+          exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`][name] = splitName;
+        } else {
+          exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`] = {};
+          exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`][name] = splitName;
+        }
       })
     } else {
-      console.log(`default as ${splitName[0]}`)
-      tsFile.addExportDeclaration({
-        namedExports: [`default as ${splitName[0]}`], 
-        moduleSpecifier: `./${joinedName}`
-      })
+      fileNames.forEach((name) => {
+        if(exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`]) {
+          Object.assign(exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`], {[name]: [firstName]});
+        } else {
+          exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`] = {};
+          Object.assign(exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`], {[name]: [firstName]});
+        }
+      });
+      /*
+      tsFile.addStatements(`export const ${firstName}: \n{${
+        (() => {
+          let nameTypes = "";
+          fileNames.forEach((name) => {
+            nameTypes += `\n${name}:${firstName}Proxy.${name},`
+          });
+          return nameTypes;
+        })()
+      }\n};`) 
+      */
     }
-    */
+    
   }
 })
+
+const traverse = (tree, dirNames, className, namespace) => {
+  for(var j = 0; j < dirNames.length; j++) {
+      if(dirNames[j] !== "") {
+          if(typeof tree[dirNames[j]] === 'undefined')
+              tree[dirNames[j]] = {};
+          tree = tree[dirNames[j]];
+      }
+
+      if(j === dirNames.length - 1) {
+        if(!tree[dirNames[j]]) {
+          tree[dirNames[j]] = {};
+        }
+        Object.assign(tree[dirNames[j]], {[className]: `${namespace}.${className}`})
+      }
+  }
+  return tree;
+}
+
+const exportTree = {};
+// Create recursive exportTree.
+for (key in exportDict) {
+  const namespace = key;
+  const classNames = exportDict[key];
+  for(key in classNames) {
+    const className = key;
+    const dirNames = classNames[key];
+    
+    const tree = traverse(exportTree, dirNames, className, namespace)
+    //console.log(JSON.stringify(tree))
+  }
+}
+
+for (key in exportTree) {
+  tsFile.addStatements(`export const ${key}: \n${JSON.stringify(exportTree[key]).replace(/['"]+/g, "")};`) 
+}
 tsFile.saveSync();
 

@@ -1,26 +1,26 @@
-import * as _Assets from "./_Assets";
-import * as _Color from "./_Color";
-import * as arrays from "./arrays/_Float32Array";
-import * as arrays from "./arrays/_Uint32Array";
-import * as audio1 from "./audio1";
-import * as audio2 from "./audio2";
-import * as audio2 from "./audio2/ogg/tools";
-import * as audio2 from "./audio2/ogg/vorbis";
-import * as audio2 from "./audio2/ogg/vorbis/_VorbisDecodeState";
-import * as audio2 from "./audio2/ogg/vorbis/data";
-import * as graphics1 from "./graphics1";
-import * as graphics2 from "./graphics2";
-import * as graphics2 from "./graphics2/truetype";
-import * as graphics4 from "./graphics4";
-import * as input from "./input";
-import * as internal from "./internal";
-import * as js from "./js";
-import * as js from "./js/graphics4";
-import * as js from "./js/vr";
-import * as math from "./math";
-import * as network from "./network";
-import * as simd from "./simd";
-import * as vr from "./vr";
+import * as _AssetsProxy1 from "./_Assets";
+import * as _ColorProxy1 from "./_Color";
+import * as arraysProxy1 from "./arrays/_Float32Array";
+import * as arraysProxy2 from "./arrays/_Uint32Array";
+import * as audio1Proxy1 from "./audio1";
+import * as audio2Proxy1 from "./audio2";
+import * as audio2Proxy2 from "./audio2/ogg/tools";
+import * as audio2Proxy3 from "./audio2/ogg/vorbis";
+import * as audio2Proxy4 from "./audio2/ogg/vorbis/_VorbisDecodeState";
+import * as audio2Proxy5 from "./audio2/ogg/vorbis/data";
+import * as graphics1Proxy1 from "./graphics1";
+import * as graphics2Proxy1 from "./graphics2";
+import * as graphics2Proxy2 from "./graphics2/truetype";
+import * as graphics4Proxy1 from "./graphics4";
+import * as inputProxy1 from "./input";
+import * as internalProxy1 from "./internal";
+import * as jsProxy1 from "./js";
+import * as jsProxy2 from "./js/graphics4";
+import * as jsProxy3 from "./js/vr";
+import * as mathProxy1 from "./math";
+import * as networkProxy1 from "./network";
+import * as simdProxy1 from "./simd";
+import * as vrProxy1 from "./vr";
 
 export { default as AlignedQuad } from "./AlignedQuad";
 export { default as Assets } from "./Assets";
@@ -50,212 +50,233 @@ export { default as WebGLImage } from "./WebGLImage";
 export { default as WindowMode } from "./WindowMode";
 export { default as WindowOptions } from "./WindowOptions";
 export { default as WindowedModeOptions } from "./WindowedModeOptions";
-export const _Assets: 
-{
-BlobList:_Assets.BlobList,
-FontList:_Assets.FontList,
-ImageList:_Assets.ImageList,
-SoundList:_Assets.SoundList,
-VideoList:_Assets.VideoList,
-} = _Assets;
-export const _Color: 
-{
-Color_Impl_:_Color.Color_Impl_,
-} = _Color;
-export const arrays: 
-{
-Float32Array_Impl_:arrays.Float32Array_Impl_,
-} = arrays;
-export const arrays: 
-{
-Uint32Array_Impl_:arrays.Uint32Array_Impl_,
-} = arrays;
-export const audio1: 
-{
-AudioChannel:audio1.AudioChannel,
-} = audio1;
-export const audio2: 
-{
-Audio:audio2.Audio,
-Audio1:audio2.Audio1,
-AudioChannel:audio2.AudioChannel,
-Buffer:audio2.Buffer,
-StreamChannel:audio2.StreamChannel,
-} = audio2;
-export const audio2: 
-{
-Crc32:audio2.Crc32,
-MathTools:audio2.MathTools,
-Mdct:audio2.Mdct,
-} = audio2;
-export const audio2: 
-{
-Reader:audio2.Reader,
-VorbisDecodeState:audio2.VorbisDecodeState,
-VorbisDecoder:audio2.VorbisDecoder,
-VorbisTools:audio2.VorbisTools,
-} = audio2;
-export const audio2: 
-{
-FindPageResult:audio2.FindPageResult,
-} = audio2;
-export const audio2: 
-{
-Codebook:audio2.Codebook,
-Comment:audio2.Comment,
-Floor:audio2.Floor,
-Floor0:audio2.Floor0,
-Floor1:audio2.Floor1,
-Header:audio2.Header,
-IntPoint:audio2.IntPoint,
-Mapping:audio2.Mapping,
-MappingChannel:audio2.MappingChannel,
-Mode:audio2.Mode,
-Page:audio2.Page,
-PageFlag:audio2.PageFlag,
-ProbedPage:audio2.ProbedPage,
-ReaderError:audio2.ReaderError,
-ReaderErrorType:audio2.ReaderErrorType,
-Residue:audio2.Residue,
-Setting:audio2.Setting,
-} = audio2;
-export const graphics1: 
-{
-Graphics:graphics1.Graphics,
-} = graphics1;
-export const graphics2: 
-{
-Graphics:graphics2.Graphics,
-Graphics1:graphics2.Graphics1,
-ImageScaleQuality:graphics2.ImageScaleQuality,
-} = graphics2;
-export const graphics2: 
-{
-StbTruetype:graphics2.StbTruetype,
-Stbtt__active_edge:graphics2.Stbtt__active_edge,
-Stbtt__bitmap:graphics2.Stbtt__bitmap,
-Stbtt__edge:graphics2.Stbtt__edge,
-Stbtt__point:graphics2.Stbtt__point,
-Stbtt_aligned_quad:graphics2.Stbtt_aligned_quad,
-Stbtt_bakedchar:graphics2.Stbtt_bakedchar,
-Stbtt_fontinfo:graphics2.Stbtt_fontinfo,
-Stbtt_pack_context:graphics2.Stbtt_pack_context,
-Stbtt_pack_range:graphics2.Stbtt_pack_range,
-Stbtt_packedchar:graphics2.Stbtt_packedchar,
-Stbtt_temp_font_v_metrics:graphics2.Stbtt_temp_font_v_metrics,
-Stbtt_temp_glyph_h_metrics:graphics2.Stbtt_temp_glyph_h_metrics,
-Stbtt_temp_rect:graphics2.Stbtt_temp_rect,
-Stbtt_temp_region:graphics2.Stbtt_temp_region,
-Stbtt_vertex:graphics2.Stbtt_vertex,
-VectorOfIntPointer:graphics2.VectorOfIntPointer,
-} = graphics2;
-export const graphics4: 
-{
-BlendingFactor:graphics4.BlendingFactor,
-BlendingOperation:graphics4.BlendingOperation,
-ColoredShaderPainter:graphics4.ColoredShaderPainter,
-CompareMode:graphics4.CompareMode,
-ConstantLocation:graphics4.ConstantLocation,
-CubeMap:graphics4.CubeMap,
-CullMode:graphics4.CullMode,
-FragmentShader:graphics4.FragmentShader,
-GeometryShader:graphics4.GeometryShader,
-Graphics:graphics4.Graphics,
-Graphics2:graphics4.Graphics2,
-ImageShaderPainter:graphics4.ImageShaderPainter,
-IndexBuffer:graphics4.IndexBuffer,
-MipMapFilter:graphics4.MipMapFilter,
-PipelineState:graphics4.PipelineState,
-PipelineStateBase:graphics4.PipelineStateBase,
-StencilAction:graphics4.StencilAction,
-TessellationControlShader:graphics4.TessellationControlShader,
-TessellationEvaluationShader:graphics4.TessellationEvaluationShader,
-TextShaderPainter:graphics4.TextShaderPainter,
-TextureAddressing:graphics4.TextureAddressing,
-TextureFilter:graphics4.TextureFilter,
-TextureFormat:graphics4.TextureFormat,
-TextureUnit:graphics4.TextureUnit,
-Usage:graphics4.Usage,
-VertexBuffer:graphics4.VertexBuffer,
-VertexData:graphics4.VertexData,
-VertexElement:graphics4.VertexElement,
-VertexShader:graphics4.VertexShader,
-VertexStructure:graphics4.VertexStructure,
-} = graphics4;
-export const input: 
-{
-Gamepad:input.Gamepad,
-Keyboard:input.Keyboard,
-Mouse:input.Mouse,
-MouseImpl:input.MouseImpl,
-Pen:input.Pen,
-Surface:input.Surface,
-} = input;
-export const internal: 
-{
-BytesBlob:internal.BytesBlob,
-HdrFormat:internal.HdrFormat,
-} = internal;
-export const js: 
-{
-AEAudioChannel:js.AEAudioChannel,
-AudioElementAudio:js.AudioElementAudio,
-CanvasGraphics:js.CanvasGraphics,
-Font:js.Font,
-MobileWebAudio:js.MobileWebAudio,
-MobileWebAudioChannel:js.MobileWebAudioChannel,
-MobileWebAudioSound:js.MobileWebAudioSound,
-Sound:js.Sound,
-Video:js.Video,
-WebAudioSound:js.WebAudioSound,
-} = js;
-export const js: 
-{
-ConstantLocation:js.ConstantLocation,
-Graphics:js.Graphics,
-Graphics2:js.Graphics2,
-TextureUnit:js.TextureUnit,
-} = js;
-export const js: 
-{
-VrInterface:js.VrInterface,
-} = js;
-export const math: 
-{
-FastMatrix3:math.FastMatrix3,
-FastMatrix4:math.FastMatrix4,
-FastVector2:math.FastVector2,
-FastVector3:math.FastVector3,
-FastVector4:math.FastVector4,
-Matrix3:math.Matrix3,
-Matrix4:math.Matrix4,
-Quaternion:math.Quaternion,
-Vector2:math.Vector2,
-Vector3:math.Vector3,
-Vector4:math.Vector4,
-} = math;
-export const network: 
-{
-Client:network.Client,
-Controller:network.Controller,
-ControllerBuilder:network.ControllerBuilder,
-Entity:network.Entity,
-LocalClient:network.LocalClient,
-Network:network.Network,
-Session:network.Session,
-State:network.State,
-SyncBuilder:network.SyncBuilder,
-} = network;
-export const simd: 
-{
-Float32x4:simd.Float32x4,
-} = simd;
-export const vr: 
-{
-Pose:vr.Pose,
-PoseState:vr.PoseState,
-SensorState:vr.SensorState,
-TimeWarpImage:vr.TimeWarpImage,
-TimeWarpParms:vr.TimeWarpParms,
-VrInterface:vr.VrInterface,
-} = vr;
+
+export namespace _Assets {
+    export type BlobList = _AssetsProxy1.BlobList;
+    export type FontList = _AssetsProxy1.FontList;
+    export type ImageList = _AssetsProxy1.ImageList;
+    export type SoundList = _AssetsProxy1.SoundList;
+    export type VideoList = _AssetsProxy1.VideoList;
+}
+
+export type Color = _ColorProxy1.Color_Impl_;
+
+
+export namespace arrays {
+    export namespace _Float32Array {
+        export namespace _Float32Array {
+            export type Float32Array_Impl_ = arraysProxy1.Float32Array_Impl_;
+        }
+    }
+
+    export namespace _Uint32Array {
+        export namespace _Uint32Array {
+            export type Uint32Array_Impl_ = arraysProxy2.Uint32Array_Impl_;
+        }
+    }
+}
+
+export namespace audio1 {
+    export type AudioChannel = audio1Proxy1.AudioChannel;
+}
+
+export namespace audio2 {
+    export type Audio = audio2Proxy1.Audio;
+    export type Audio1 = audio2Proxy1.Audio1;
+    export type AudioChannel = audio2Proxy1.AudioChannel;
+    export type Buffer = audio2Proxy1.Buffer;
+    export type StreamChannel = audio2Proxy1.StreamChannel;
+
+    export namespace ogg {
+        export namespace tools {
+            export namespace tools {
+                export type Crc32 = audio2Proxy2.Crc32;
+                export type MathTools = audio2Proxy2.MathTools;
+                export type Mdct = audio2Proxy2.Mdct;
+            }
+        }
+
+        export namespace vorbis {
+            export namespace vorbis {
+                export type Reader = audio2Proxy3.Reader;
+                export type VorbisDecodeState = audio2Proxy3.VorbisDecodeState;
+                export type VorbisDecoder = audio2Proxy3.VorbisDecoder;
+                export type VorbisTools = audio2Proxy3.VorbisTools;
+            }
+
+            export namespace _VorbisDecodeState {
+                export namespace _VorbisDecodeState {
+                    export type FindPageResult = audio2Proxy4.FindPageResult;
+                }
+            }
+
+            export namespace data {
+                export namespace data {
+                    export type Codebook = audio2Proxy5.Codebook;
+                    export type Comment = audio2Proxy5.Comment;
+                    export type Floor = audio2Proxy5.Floor;
+                    export type Floor0 = audio2Proxy5.Floor0;
+                    export type Floor1 = audio2Proxy5.Floor1;
+                    export type Header = audio2Proxy5.Header;
+                    export type IntPoint = audio2Proxy5.IntPoint;
+                    export type Mapping = audio2Proxy5.Mapping;
+                    export type MappingChannel = audio2Proxy5.MappingChannel;
+                    export type Mode = audio2Proxy5.Mode;
+                    export type Page = audio2Proxy5.Page;
+                    export type PageFlag = audio2Proxy5.PageFlag;
+                    export type ProbedPage = audio2Proxy5.ProbedPage;
+                    export type ReaderError = audio2Proxy5.ReaderError;
+                    export type ReaderErrorType = audio2Proxy5.ReaderErrorType;
+                    export type Residue = audio2Proxy5.Residue;
+                    export type Setting = audio2Proxy5.Setting;
+                }
+            }
+        }
+    }
+}
+
+export namespace graphics1 {
+    export type Graphics = graphics1Proxy1.Graphics;
+}
+
+export namespace graphics2 {
+    export type Graphics = graphics2Proxy1.Graphics;
+    export type Graphics1 = graphics2Proxy1.Graphics1;
+    export type ImageScaleQuality = graphics2Proxy1.ImageScaleQuality;
+
+    export namespace truetype {
+        export namespace truetype {
+            export type StbTruetype = graphics2Proxy2.StbTruetype;
+            export type Stbtt__active_edge = graphics2Proxy2.Stbtt__active_edge;
+            export type Stbtt__bitmap = graphics2Proxy2.Stbtt__bitmap;
+            export type Stbtt__edge = graphics2Proxy2.Stbtt__edge;
+            export type Stbtt__point = graphics2Proxy2.Stbtt__point;
+            export type Stbtt_aligned_quad = graphics2Proxy2.Stbtt_aligned_quad;
+            export type Stbtt_bakedchar = graphics2Proxy2.Stbtt_bakedchar;
+            export type Stbtt_fontinfo = graphics2Proxy2.Stbtt_fontinfo;
+            export type Stbtt_pack_context = graphics2Proxy2.Stbtt_pack_context;
+            export type Stbtt_pack_range = graphics2Proxy2.Stbtt_pack_range;
+            export type Stbtt_packedchar = graphics2Proxy2.Stbtt_packedchar;
+            export type Stbtt_temp_font_v_metrics = graphics2Proxy2.Stbtt_temp_font_v_metrics;
+            export type Stbtt_temp_glyph_h_metrics = graphics2Proxy2.Stbtt_temp_glyph_h_metrics;
+            export type Stbtt_temp_rect = graphics2Proxy2.Stbtt_temp_rect;
+            export type Stbtt_temp_region = graphics2Proxy2.Stbtt_temp_region;
+            export type Stbtt_vertex = graphics2Proxy2.Stbtt_vertex;
+            export type VectorOfIntPointer = graphics2Proxy2.VectorOfIntPointer;
+        }
+    }
+}
+
+export namespace graphics4 {
+    export type BlendingFactor = graphics4Proxy1.BlendingFactor;
+    export type BlendingOperation = graphics4Proxy1.BlendingOperation;
+    export type ColoredShaderPainter = graphics4Proxy1.ColoredShaderPainter;
+    export type CompareMode = graphics4Proxy1.CompareMode;
+    export type ConstantLocation = graphics4Proxy1.ConstantLocation;
+    export type CubeMap = graphics4Proxy1.CubeMap;
+    export type CullMode = graphics4Proxy1.CullMode;
+    export type FragmentShader = graphics4Proxy1.FragmentShader;
+    export type GeometryShader = graphics4Proxy1.GeometryShader;
+    export type Graphics = graphics4Proxy1.Graphics;
+    export type Graphics2 = graphics4Proxy1.Graphics2;
+    export type ImageShaderPainter = graphics4Proxy1.ImageShaderPainter;
+    export type IndexBuffer = graphics4Proxy1.IndexBuffer;
+    export type MipMapFilter = graphics4Proxy1.MipMapFilter;
+    export type PipelineState = graphics4Proxy1.PipelineState;
+    export type PipelineStateBase = graphics4Proxy1.PipelineStateBase;
+    export type StencilAction = graphics4Proxy1.StencilAction;
+    export type TessellationControlShader = graphics4Proxy1.TessellationControlShader;
+    export type TessellationEvaluationShader = graphics4Proxy1.TessellationEvaluationShader;
+    export type TextShaderPainter = graphics4Proxy1.TextShaderPainter;
+    export type TextureAddressing = graphics4Proxy1.TextureAddressing;
+    export type TextureFilter = graphics4Proxy1.TextureFilter;
+    export type TextureFormat = graphics4Proxy1.TextureFormat;
+    export type TextureUnit = graphics4Proxy1.TextureUnit;
+    export type Usage = graphics4Proxy1.Usage;
+    export type VertexBuffer = graphics4Proxy1.VertexBuffer;
+    export type VertexData = graphics4Proxy1.VertexData;
+    export type VertexElement = graphics4Proxy1.VertexElement;
+    export type VertexShader = graphics4Proxy1.VertexShader;
+    export type VertexStructure = graphics4Proxy1.VertexStructure;
+}
+
+export namespace input {
+    export type Gamepad = inputProxy1.Gamepad;
+    export type Keyboard = inputProxy1.Keyboard;
+    export type Mouse = inputProxy1.Mouse;
+    export type MouseImpl = inputProxy1.MouseImpl;
+    export type Pen = inputProxy1.Pen;
+    export type Surface = inputProxy1.Surface;
+}
+
+export namespace internal {
+    export type BytesBlob = internalProxy1.BytesBlob;
+    export type HdrFormat = internalProxy1.HdrFormat;
+}
+
+export namespace js {
+    export type AEAudioChannel = jsProxy1.AEAudioChannel;
+    export type AudioElementAudio = jsProxy1.AudioElementAudio;
+    export type CanvasGraphics = jsProxy1.CanvasGraphics;
+    export type Font = jsProxy1.Font;
+    export type MobileWebAudio = jsProxy1.MobileWebAudio;
+    export type MobileWebAudioChannel = jsProxy1.MobileWebAudioChannel;
+    export type MobileWebAudioSound = jsProxy1.MobileWebAudioSound;
+    export type Sound = jsProxy1.Sound;
+    export type Video = jsProxy1.Video;
+    export type WebAudioSound = jsProxy1.WebAudioSound;
+
+    export namespace graphics4 {
+        export namespace graphics4 {
+            export type ConstantLocation = jsProxy2.ConstantLocation;
+            export type Graphics = jsProxy2.Graphics;
+            export type Graphics2 = jsProxy2.Graphics2;
+            export type TextureUnit = jsProxy2.TextureUnit;
+        }
+    }
+
+    export namespace vr {
+        export namespace vr {
+            export type VrInterface = jsProxy3.VrInterface;
+        }
+    }
+}
+
+export namespace math {
+    export type FastMatrix3 = mathProxy1.FastMatrix3;
+    export type FastMatrix4 = mathProxy1.FastMatrix4;
+    export type FastVector2 = mathProxy1.FastVector2;
+    export type FastVector3 = mathProxy1.FastVector3;
+    export type FastVector4 = mathProxy1.FastVector4;
+    export type Matrix3 = mathProxy1.Matrix3;
+    export type Matrix4 = mathProxy1.Matrix4;
+    export type Quaternion = mathProxy1.Quaternion;
+    export type Vector2 = mathProxy1.Vector2;
+    export type Vector3 = mathProxy1.Vector3;
+    export type Vector4 = mathProxy1.Vector4;
+}
+
+export namespace network {
+    export type Client = networkProxy1.Client;
+    export type Controller = networkProxy1.Controller;
+    export type ControllerBuilder = networkProxy1.ControllerBuilder;
+    export type Entity = networkProxy1.Entity;
+    export type LocalClient = networkProxy1.LocalClient;
+    export type Network = networkProxy1.Network;
+    export type Session = networkProxy1.Session;
+    export type State = networkProxy1.State;
+    export type SyncBuilder = networkProxy1.SyncBuilder;
+}
+
+export namespace simd {
+    export type Float32x4 = simdProxy1.Float32x4;
+}
+
+export namespace vr {
+    export type Pose = vrProxy1.Pose;
+    export type PoseState = vrProxy1.PoseState;
+    export type SensorState = vrProxy1.SensorState;
+    export type TimeWarpImage = vrProxy1.TimeWarpImage;
+    export type TimeWarpParms = vrProxy1.TimeWarpParms;
+    export type VrInterface = vrProxy1.VrInterface;
+}

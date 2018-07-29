@@ -10,7 +10,7 @@ export class CompilerDefines {
 	static kha_a1:string;
 	static kha_g3:string;
 	static kha_html5_js:string;
-	static source-header:string;
+	static source_header:string;
 	static jquery_ver:string;
 	static kha_js:string;
 	static sys_html5:string;
@@ -31,8 +31,6 @@ export class CompilerDefines {
 	static canvas_id:string;
 	static kha_version:string;
 	static js_es:string;
-	static kha_html5:string;
-	static js-es5:string;
 	static js_es5:string;
 	static sys_a2:string;
 	static dce:string;

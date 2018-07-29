@@ -1,7 +1,7 @@
 {
   "name": "kha",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.4",
+  "description": "Multimedia graphics rendering library Kha for Typescript (port of Haxe library).",
   "main": "./src/kha/index.js",
   "types": "./src/kha/index.d.ts",
   "scripts": {

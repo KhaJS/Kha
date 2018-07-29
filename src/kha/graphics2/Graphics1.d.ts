@@ -8,9 +8,9 @@ import * as khaModule from 'kha';
 declare namespace kha.graphics2 {
 
 export class Graphics1 {
-
+  
 	constructor(canvas:any);
-	canvas:khaModule.Canvas;
+	canvas:khaModule.Color;
 	texture:Image;
 	pixels:io.Bytes;
 	begin():void;

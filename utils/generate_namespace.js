@@ -160,23 +160,13 @@ fileDict.forEach((fileNames, dirName) => {
           Object.assign(exportDict[`${firstName}Proxy${existingNames.get(firstName).length}`], {[name]: [firstName]});
         }
       });
-      /*
-      tsFile.addStatements(`export const ${firstName}: \n{${
-        (() => {
-          let nameTypes = "";
-          fileNames.forEach((name) => {
-            nameTypes += `\n${name}:${firstName}Proxy.${name},`
-          });
-          return nameTypes;
-        })()
-      }\n};`) 
-      */
     }
-    
   }
 })
 
-const traverse = (tree, dirNames, className, namespace) => {
+const exportTree = {};
+
+const traverseDict = (tree, dirNames, className, namespace) => {
   for(var j = 0; j < dirNames.length; j++) {
       if(dirNames[j] !== "") {
           if(typeof tree[dirNames[j]] === 'undefined')
@@ -185,31 +175,58 @@ const traverse = (tree, dirNames, className, namespace) => {
       }
 
       if(j === dirNames.length - 1) {
-        if(!tree[dirNames[j]]) {
-          tree[dirNames[j]] = {};
+        
+        if(dirNames.length === 1) {
+          Object.assign(exportTree[dirNames[0]], {[className]: `${namespace}.${className}`})
+        } else {
+          if(!tree[dirNames[j]]) {
+            tree[dirNames[j]] = {};
+          }
+          Object.assign(tree[dirNames[j]], {[className]: `${namespace}.${className}`})
         }
-        Object.assign(tree[dirNames[j]], {[className]: `${namespace}.${className}`})
       }
   }
   return tree;
 }
 
-const exportTree = {};
-// Create recursive exportTree.
+// Create recursive exportTree by traversing exportDict.
 for (key in exportDict) {
   const namespace = key;
   const classNames = exportDict[key];
+
+  
   for(key in classNames) {
     const className = key;
     const dirNames = classNames[key];
-    
-    const tree = traverse(exportTree, dirNames, className, namespace)
-    //console.log(JSON.stringify(tree))
+    const tree = traverseDict(exportTree, dirNames, className, namespace)
+  }
+}
+
+// Traverse tree to create namespaces.
+const traverseTree = (obj, parent, parentKey, node) => {
+  for (let k in obj) {
+    if (obj[k] && typeof obj[k] === 'object') {
+      const nameSpace = node.addNamespace({
+        isExported: true,
+        name: k
+      })
+      traverseTree(obj[k], obj, k, nameSpace)
+    } else {
+      node.addTypeAlias({
+        isExported: true,
+        name: k,
+        type: obj[k]
+      })
+    }
   }
 }
 
 for (key in exportTree) {
-  tsFile.addStatements(`export const ${key}: \n${JSON.stringify(exportTree[key]).replace(/['"]+/g, "")};`) 
+ const decl = tsFile.addNamespace({
+    isExported: true,
+    name: key,
+  });
+  traverseTree(exportTree[key], exportTree, key, decl)
 }
-tsFile.saveSync();
 
+tsFile.saveSync();

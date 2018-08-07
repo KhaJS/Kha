@@ -62,4 +62,4 @@ export class System_Impl_ {
 
 }
 
-export default kha.System;
+export default kha.System_Impl_;

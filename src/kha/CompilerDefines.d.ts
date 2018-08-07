@@ -31,6 +31,7 @@ export class CompilerDefines {
 	static canvas_id:string;
 	static kha_version:string;
 	static js_es:string;
+	static kha_html5:string;
 	static js_es5:string;
 	static sys_a2:string;
 	static dce:string;

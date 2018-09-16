@@ -5,13 +5,13 @@ declare namespace kha.graphics4 {
 
 export class FragmentShader {
 
-	constructor(sources:any, files:any);
+	constructor(sources:Array<any>, files:Array<any>);
 	sources:Array<any>;
 	
 	
 	files:Array<any>;
 	delete():void;
-	static fromSource(source:any):khaModule.graphics4.FragmentShader;
+	static fromSource(source:string):khaModule.graphics4.FragmentShader;
 
 
 }

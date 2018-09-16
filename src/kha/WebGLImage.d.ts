@@ -17,9 +17,9 @@ declare namespace kha {
 
 export class WebGLImage extends kha_Image {
 
-	constructor(width:any, height:any, format:any, renderTarget:any, depthStencilFormat:any, samples:any);
+	constructor(width:number, height:number, format:TextureFormat, renderTarget:boolean, depthStencilFormat:khaModule.graphics4.DepthStencilFormat, samples:number);
 	
-	video:;
+	video:any;
 	
 	myWidth:number;
 	myHeight:number;
@@ -41,23 +41,23 @@ export class WebGLImage extends kha_Image {
 	get_height():number;
 	get_realWidth():number;
 	get_realHeight():number;
-	isOpaque(x:any, y:any):boolean;
-	at(x:any, y:any):Color_Impl_;
+	isOpaque(x:number, y:number):boolean;
+	at(x:number, y:number):Color_Impl_;
 	createImageData():void;
 	createTexture():void;
-	initDepthStencilBuffer(depthStencilFormat:any):void;
-	set(stage:any):void;
-	setDepth(stage:any):void;
-	setDepthStencilFrom(image:any):void;
-	bytesToArray(bytes:any):;
+	initDepthStencilBuffer(depthStencilFormat:khaModule.graphics4.DepthStencilFormat):void;
+	set(stage:number):void;
+	setDepth(stage:number):void;
+	setDepthStencilFrom(image:Image):void;
+	bytesToArray(bytes:Bytes):any;
 	bytes:Bytes;
-	lock(level?:any):Bytes;
+	lock(level?:number):Bytes;
 	unlock():void;
-	pixels:;
+	pixels:any;
 	getPixels():Bytes;
 	unload():void;
-	generateMipmaps(levels:any):void;
-	setMipmaps(mipmaps:any):void;
+	generateMipmaps(levels:number):void;
+	setMipmaps(mipmaps:Array<any>):void;
 	
 	static GL_RGBA16F:number;
 	static GL_RGBA32F:number;
@@ -67,10 +67,10 @@ export class WebGLImage extends kha_Image {
 	static GL_DEPTH_COMPONENT24:number;
 	static GL_DEPTH24_STENCIL8:number;
 	static GL_DEPTH32F_STENCIL8:number;
-	static canvas:;
+	static canvas:any;
 	static init():void;
-	static upperPowerOfTwo(v:any):number;
-	static formatByteSize(format:any):number;
+	static upperPowerOfTwo(v:number):number;
+	static formatByteSize(format:TextureFormat):number;
 
 
 }

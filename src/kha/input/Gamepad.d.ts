@@ -6,7 +6,7 @@ declare namespace kha.input {
 
 export class Gamepad {
 
-	constructor(index?:any, id?:any);
+	constructor(index?:number, id?:string);
 	index:number;
 	notify(axisListener:any, buttonListener:any):void;
 	remove(axisListener:any, buttonListener:any):void;
@@ -15,17 +15,17 @@ export class Gamepad {
 	id:string;
 	connected:boolean;
 	get_id():string;
-	sendAxisEvent(axis:any, value:any):void;
-	sendButtonEvent(button:any, value:any):void;
+	sendAxisEvent(axis:number, value:number):void;
+	sendButtonEvent(button:number, value:number):void;
 	
-	static get(index?:any):khaModule.input.Gamepad;
+	static get(index?:number):khaModule.input.Gamepad;
 	static notifyOnConnect(connectListener:any, disconnectListener:any):void;
 	static removeConnect(connectListener:any, disconnectListener:any):void;
 	static instances:Array<any>;
 	static connectListeners:Array<any>;
 	static disconnectListeners:Array<any>;
-	static sendConnectEvent(index:any):void;
-	static sendDisconnectEvent(index:any):void;
+	static sendConnectEvent(index:number):void;
+	static sendDisconnectEvent(index:number):void;
 
 
 }

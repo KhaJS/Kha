@@ -13,17 +13,17 @@ declare namespace kha {
 
 export class Kravur {
 
-	constructor(blob:any);
+	constructor(blob:Blob);
 	oldGlyphs:Array<any>;
 	
 	images:Map;
-	_get(fontSize:any, glyphs?:any):KravurImage;
-	height(fontSize:any):number;
-	width(fontSize:any, str:any):number;
-	widthOfCharacters(fontSize:any, characters:any, start:any, length:any):number;
-	baseline(fontSize:any):number;
+	_get(fontSize:number, glyphs?:any):KravurImage;
+	height(fontSize:number):number;
+	width(fontSize:number, str:string):number;
+	widthOfCharacters(fontSize:number, characters:Array<any>, start:number, length:number):number;
+	baseline(fontSize:number):number;
 	unload():void;
-	static fromBytes(bytes:any):Kravur;
+	static fromBytes(bytes:Bytes):Kravur;
 
 
 }

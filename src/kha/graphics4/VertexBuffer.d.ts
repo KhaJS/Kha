@@ -8,7 +8,7 @@ declare namespace kha.graphics4 {
 
 export class VertexBuffer {
 
-	constructor(vertexCount:any, structure:any, usage:any, instanceDataStepRate?:any, canRead?:any);
+	constructor(vertexCount:number, structure:khaModule.graphics4.VertexStructure, usage:Usage, instanceDataStepRate?:number, canRead?:boolean);
 	
 	_data:khaModule.arrays.Float32Array;
 	mySize:number;
@@ -22,7 +22,7 @@ export class VertexBuffer {
 	unlock():void;
 	stride():number;
 	count():number;
-	set(offset:any):number;
+	set(offset:number):number;
 
 
 }

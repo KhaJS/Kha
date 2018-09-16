@@ -10,7 +10,7 @@ declare namespace kha.graphics4 {
 
 export class CubeMap {
 
-	constructor(size:any, format:any, renderTarget:any, depthStencilFormat:any);
+	constructor(size:number, format:TextureFormat, renderTarget:boolean, depthStencilFormat:khaModule.graphics4.DepthStencilFormat);
 	myWidth:number;
 	myHeight:number;
 	
@@ -22,11 +22,11 @@ export class CubeMap {
 	
 	isDepthAttachment:boolean;
 	createTexture():void;
-	initDepthStencilBuffer(depthStencilFormat:any):void;
-	set(stage:any):void;
-	setDepth(stage:any):void;
+	initDepthStencilBuffer(depthStencilFormat:khaModule.graphics4.DepthStencilFormat):void;
+	set(stage:number):void;
+	setDepth(stage:number):void;
 	unload():void;
-	lock(level?:any):io.Bytes;
+	lock(level?:number):any;
 	unlock():void;
 	width:number;
 	get_width():number;
@@ -45,7 +45,7 @@ export class CubeMap {
 	static GL_DEPTH_COMPONENT24:number;
 	static GL_DEPTH24_STENCIL8:number;
 	static GL_DEPTH32F_STENCIL8:number;
-	static createRenderTarget(size:any, format?:any, depthStencil?:any, contextId?:any):khaModule.graphics4.CubeMap;
+	static createRenderTarget(size:number, format?:any, depthStencil?:any, contextId?:number):khaModule.graphics4.CubeMap;
 
 
 }

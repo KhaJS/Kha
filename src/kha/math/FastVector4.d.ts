@@ -5,16 +5,16 @@ declare namespace kha.math {
 
 export class FastVector4 {
 
-	constructor(x?:any, y?:any, z?:any, w?:any);
+	constructor(x?:khaModule.FastFloat, y?:khaModule.FastFloat, z?:khaModule.FastFloat, w?:khaModule.FastFloat);
 	
 	
 	
 	
 	
 	get_length():khaModule.FastFloat;
-	set_length(length:any):khaModule.FastFloat;
+	set_length(length:khaModule.FastFloat):khaModule.FastFloat;
 	toString():string;
-	static fromVector4(v:any):khaModule.math.FastVector4;
+	static fromVector4(v:khaModule.math.Vector4):khaModule.math.FastVector4;
 
 
 }

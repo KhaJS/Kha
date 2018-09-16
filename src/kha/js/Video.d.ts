@@ -13,23 +13,23 @@ export class Video extends kha_Video {
 
 	constructor();
 	filenames:Array<any>;
-	element:;
-	done(a1:any):void;
+	element:any;
+	done(a1:Video):void;
 	texture:Image;
 	width():number;
 	height():number;
-	play(loop?:any):void;
+	play(loop?:boolean):void;
 	pause():void;
 	stop():void;
 	getCurrentPos():number;
 	get_position():number;
-	set_position(value:any):number;
+	set_position(value:number):number;
 	getLength():number;
 	errorListener(eventInfo:any):void;
 	canPlayThroughListener(eventInfo:any):void;
 	finishAsset():void;
 	static fromElement(element:any):Video;
-	static fromFile(filenames:any, done:any):void;
+	static fromFile(filenames:Array<any>, done:any):void;
 
 
 }

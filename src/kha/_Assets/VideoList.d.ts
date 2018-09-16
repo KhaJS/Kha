@@ -6,7 +6,7 @@ declare namespace kha._Assets {
 export class VideoList {
 
 	constructor();
-	get(name:any):khaModule.Video;
+	get(name:string):khaModule.Video;
 	names:Array<any>;
 
 

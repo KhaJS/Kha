@@ -18,34 +18,34 @@ export class CanvasGraphics extends kha_graphics2_Graphics {
 	webfont:Font;
 	myColor:Color_Impl_;
 	
-	begin(clear?:any, clearColor?:any):void;
+	begin(clear?:boolean, clearColor?:any):void;
 	clear(color?:any):void;
 	end():void;
-	drawImage(img:any, x:any, y:any):void;
-	drawScaledSubImage(image:any, sx:any, sy:any, sw:any, sh:any, dx:any, dy:any, dw:any, dh:any):void;
-	set_color(color:any):Color_Impl_;
+	drawImage(img:Image, x:number, y:number):void;
+	drawScaledSubImage(image:Image, sx:number, sy:number, sw:number, sh:number, dx:number, dy:number, dw:number, dh:number):void;
+	set_color(color:Color_Impl_):Color_Impl_;
 	get_color():Color_Impl_;
 	get_imageScaleQuality():ImageScaleQuality;
-	set_imageScaleQuality(value:any):ImageScaleQuality;
-	drawRect(x:any, y:any, width:any, height:any, strength?:any):void;
-	fillRect(x:any, y:any, width:any, height:any):void;
-	drawArc(cx:any, cy:any, radius:any, sAngle:any, eAngle:any, strength?:any, ccw?:any):void;
-	drawCircle(cx:any, cy:any, radius:any, strength?:any):void;
-	_drawArc(cx:any, cy:any, radius:any, sAngle:any, eAngle:any, strength:any, ccw:any):void;
-	fillArc(cx:any, cy:any, radius:any, sAngle:any, eAngle:any, ccw?:any):void;
-	fillCircle(cx:any, cy:any, radius:any):void;
+	set_imageScaleQuality(value:ImageScaleQuality):ImageScaleQuality;
+	drawRect(x:number, y:number, width:number, height:number, strength?:number):void;
+	fillRect(x:number, y:number, width:number, height:number):void;
+	drawArc(cx:number, cy:number, radius:number, sAngle:number, eAngle:number, strength?:number, ccw?:boolean):void;
+	drawCircle(cx:number, cy:number, radius:number, strength?:number):void;
+	_drawArc(cx:number, cy:number, radius:number, sAngle:number, eAngle:number, strength:number, ccw:boolean):void;
+	fillArc(cx:number, cy:number, radius:number, sAngle:number, eAngle:number, ccw?:boolean):void;
+	fillCircle(cx:number, cy:number, radius:number):void;
 	bakedQuadCache:AlignedQuad;
-	drawString(text:any, x:any, y:any):void;
-	set_font(font:any):Font;
+	drawString(text:string, x:number, y:number):void;
+	set_font(font:Font):Font;
 	get_font():Font;
-	drawLine(x1:any, y1:any, x2:any, y2:any, strength?:any):void;
-	fillTriangle(x1:any, y1:any, x2:any, y2:any, x3:any, y3:any):void;
-	scissor(x:any, y:any, width:any, height:any):void;
+	drawLine(x1:number, y1:number, x2:number, y2:number, strength?:number):void;
+	fillTriangle(x1:number, y1:number, x2:number, y2:number, x3:number, y3:number):void;
+	scissor(x:number, y:number, width:number, height:number):void;
 	disableScissor():void;
-	drawVideo(video:any, x:any, y:any, width:any, height:any):void;
-	setTransformation(transformation:any):void;
+	drawVideo(video:Video, x:number, y:number, width:number, height:number):void;
+	setTransformation(transformation:khaModule.math.FastMatrix3):void;
 	static instance:khaModule.js.CanvasGraphics;
-	static stringWidth(font:any, text:any):number;
+	static stringWidth(font:Font, text:string):number;
 
 
 }

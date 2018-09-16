@@ -12,7 +12,7 @@ export class Mode {
 	mapping:number;
 	windowtype:number;
 	transformtype:number;
-	static read(decodeState:any):khaModule.audio2.ogg.vorbis.data.Mode;
+	static read(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState):khaModule.audio2.ogg.vorbis.data.Mode;
 
 
 }

@@ -9,7 +9,7 @@ declare namespace kha.graphics4 {
 
 export class ColoredShaderPainter {
 
-	constructor(g4:any);
+	constructor(g4:Graphics);
 	projectionMatrix:khaModule.math.FastMatrix4;
 	g:Graphics;
 	myPipeline:khaModule.graphics4.PipelineState;
@@ -18,19 +18,19 @@ export class ColoredShaderPainter {
 	
 	
 	get_pipeline():khaModule.graphics4.PipelineState;
-	set_pipeline(pipe:any):khaModule.graphics4.PipelineState;
-	setProjection(projectionMatrix:any):void;
+	set_pipeline(pipe:khaModule.graphics4.PipelineState):khaModule.graphics4.PipelineState;
+	setProjection(projectionMatrix:khaModule.math.FastMatrix4):void;
 	initBuffers():void;
-	setRectVertices(bottomleftx:any, bottomlefty:any, topleftx:any, toplefty:any, toprightx:any, toprighty:any, bottomrightx:any, bottomrighty:any):void;
-	setRectColors(opacity:any, color:any):void;
-	setTriVertices(x1:any, y1:any, x2:any, y2:any, x3:any, y3:any):void;
-	setTriColors(opacity:any, color:any):void;
-	drawBuffer(trisDone:any):void;
-	drawTriBuffer(rectsDone:any):void;
-	fillRect(opacity:any, color:any, bottomleftx:any, bottomlefty:any, topleftx:any, toplefty:any, toprightx:any, toprighty:any, bottomrightx:any, bottomrighty:any):void;
-	fillTriangle(opacity:any, color:any, x1:any, y1:any, x2:any, y2:any, x3:any, y3:any):void;
-	endTris(rectsDone:any):void;
-	endRects(trisDone:any):void;
+	setRectVertices(bottomleftx:number, bottomlefty:number, topleftx:number, toplefty:number, toprightx:number, toprighty:number, bottomrightx:number, bottomrighty:number):void;
+	setRectColors(opacity:khaModule.FastFloat, color:khaModule.Color):void;
+	setTriVertices(x1:number, y1:number, x2:number, y2:number, x3:number, y3:number):void;
+	setTriColors(opacity:khaModule.FastFloat, color:khaModule.Color):void;
+	drawBuffer(trisDone:boolean):void;
+	drawTriBuffer(rectsDone:boolean):void;
+	fillRect(opacity:khaModule.FastFloat, color:khaModule.Color, bottomleftx:number, bottomlefty:number, topleftx:number, toplefty:number, toprightx:number, toprighty:number, bottomrightx:number, bottomrighty:number):void;
+	fillTriangle(opacity:khaModule.FastFloat, color:khaModule.Color, x1:number, y1:number, x2:number, y2:number, x3:number, y3:number):void;
+	endTris(rectsDone:boolean):void;
+	endRects(trisDone:boolean):void;
 	end():void;
 	static shaderPipeline:khaModule.graphics4.PipelineState;
 	static structure:khaModule.graphics4.VertexStructure;

@@ -16,28 +16,28 @@ export class System_Impl_ {
 	static dropFilesListeners:Array<any>;
 	static cutListener():string;
 	static copyListener():string;
-	static pasteListener(a1:any):void;
+	static pasteListener(a1:string):void;
 	static theTitle:string;
-	static init(options:any, callback:any):void;
-	static initEx(title:any, options:any, windowCallback:any, callback:any):void;
+	static init(options:khaModule.SystemOptions, callback:any):void;
+	static initEx(title:string, options:Array<any>, windowCallback:any, callback:any):void;
 	static title:string;
 	static get_title():string;
-	static notifyOnRender(listener:any, id?:any):void;
-	static removeRenderListener(listener:any, id?:any):void;
+	static notifyOnRender(listener:any, id?:number):void;
+	static removeRenderListener(listener:any, id?:number):void;
 	static notifyOnApplicationState(foregroundListener:any, resumeListener:any, pauseListener:any, backgroundListener:any, shutdownListener:any):void;
 	static notifyOnDropFiles(dropFilesListener:any):void;
 	static notifyOnCutCopyPaste(cutListener:any, copyListener:any, pasteListener:any):void;
-	static render(id:any, framebuffer:any):void;
+	static render(id:number, framebuffer:khaModule.Framebuffer):void;
 	static foreground():void;
 	static resume():void;
 	static pause():void;
 	static background():void;
 	static shutdown():void;
-	static dropFiles(filePath:any):void;
+	static dropFiles(filePath:string):void;
 	static time:number;
 	static get_time():number;
-	static windowWidth(windowId?:any):number;
-	static windowHeight(windowId?:any):number;
+	static windowWidth(windowId?:number):number;
+	static windowHeight(windowId?:number):number;
 	static screenDpi():number;
 	
 	static get_screenRotation():khaModule.ScreenRotation;
@@ -48,8 +48,8 @@ export class System_Impl_ {
 	static systemId:string;
 	static get_systemId():string;
 	static requestShutdown():void;
-	static changeResolution(width:any, height:any):void;
-	static loadUrl(url:any):void;
+	static changeResolution(width:number, height:number):void;
+	static loadUrl(url:string):void;
 	static canSwitchFullscreen():boolean;
 	static isFullscreen():boolean;
 	static requestFullscreen():void;
@@ -62,4 +62,4 @@ export class System_Impl_ {
 
 }
 
-export default kha.System_Impl_;
+export default kha.System;

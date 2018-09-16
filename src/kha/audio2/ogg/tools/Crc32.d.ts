@@ -6,9 +6,9 @@ declare namespace kha.audio2.ogg.tools {
 export class Crc32 {
 
 	static POLY:UInt;
-	static table:ds.Vector;
+	static table:any;
 	static init():void;
-	static update(crc:any, byte:any):UInt;
+	static update(crc:UInt, byte:UInt):UInt;
 
 
 }

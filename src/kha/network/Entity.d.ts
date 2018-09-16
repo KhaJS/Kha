@@ -8,8 +8,8 @@ export class Entity {
 	
 	_id():number;
 	_size():number;
-	_send(offset:any, bytes:any):number;
-	_receive(offset:any, bytes:any):number;
+	_send(offset:number, bytes:any):number;
+	_receive(offset:number, bytes:any):number;
 
 
 }

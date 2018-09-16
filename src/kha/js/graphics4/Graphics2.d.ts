@@ -8,9 +8,9 @@ declare namespace kha.js.graphics4 {
 
 export class Graphics2 extends kha_graphics4_Graphics2 {
 
-	constructor(canvas:any);
-	drawVideoInternal(video:any, x:any, y:any, width:any, height:any):void;
-	begin(clear?:any, clearColor?:any):void;
+	constructor(canvas:khaModule.Canvas);
+	drawVideoInternal(video:Video, x:number, y:number, width:number, height:number):void;
+	begin(clear?:boolean, clearColor?:any):void;
 
 
 }

@@ -9,12 +9,12 @@ declare namespace kha.audio2 {
 export class Audio {
 
 	static buffer:Buffer;
-	static _context:;
-	static processingNode:;
+	static _context:any;
+	static processingNode:any;
 	static initContext():void;
 	static _init():boolean;
-	static audioCallback(a1:any, a2:any):void;
-	static stream(sound:any, loop?:any):AudioChannel;
+	static audioCallback(a1:number, a2:Buffer):void;
+	static stream(sound:khaModule.Sound, loop?:boolean):AudioChannel;
 
 
 }

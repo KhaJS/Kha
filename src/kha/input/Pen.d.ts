@@ -9,15 +9,15 @@ export class Pen {
 	constructor();
 	notify(downListener:any, upListener:any, moveListener:any):void;
 	remove(downListener:any, upListener:any, moveListener:any):void;
-	notifyWindowed(windowId:any, downListener:any, upListener:any, moveListener:any):void;
-	removeWindowed(windowId:any, downListener:any, upListener:any, moveListener:any):void;
+	notifyWindowed(windowId:number, downListener:any, upListener:any, moveListener:any):void;
+	removeWindowed(windowId:number, downListener:any, upListener:any, moveListener:any):void;
 	windowDownListeners:Array<any>;
 	windowUpListeners:Array<any>;
 	windowMoveListeners:Array<any>;
-	sendDownEvent(windowId:any, x:any, y:any, pressure:any):void;
-	sendUpEvent(windowId:any, x:any, y:any, pressure:any):void;
-	sendMoveEvent(windowId:any, x:any, y:any, pressure:any):void;
-	static get(num?:any):khaModule.input.Pen;
+	sendDownEvent(windowId:number, x:number, y:number, pressure:number):void;
+	sendUpEvent(windowId:number, x:number, y:number, pressure:number):void;
+	sendMoveEvent(windowId:number, x:number, y:number, pressure:number):void;
+	static get(num?:number):khaModule.input.Pen;
 	static instance:khaModule.input.Pen;
 
 

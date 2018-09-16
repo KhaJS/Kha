@@ -6,7 +6,7 @@ declare namespace kha._Assets {
 export class FontList {
 
 	constructor();
-	get(name:any):khaModule.Font;
+	get(name:string):khaModule.Font;
 	names:Array<any>;
 
 

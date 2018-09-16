@@ -5,7 +5,7 @@ declare namespace kha.math {
 
 export class FastMatrix4 {
 
-	constructor(_00:any, _10:any, _20:any, _30:any, _01:any, _11:any, _21:any, _31:any, _02:any, _12:any, _22:any, _32:any, _03:any, _13:any, _23:any, _33:any);
+	constructor(_00:khaModule.FastFloat, _10:khaModule.FastFloat, _20:khaModule.FastFloat, _30:khaModule.FastFloat, _01:khaModule.FastFloat, _11:khaModule.FastFloat, _21:khaModule.FastFloat, _31:khaModule.FastFloat, _02:khaModule.FastFloat, _12:khaModule.FastFloat, _22:khaModule.FastFloat, _32:khaModule.FastFloat, _03:khaModule.FastFloat, _13:khaModule.FastFloat, _23:khaModule.FastFloat, _33:khaModule.FastFloat);
 	
 	
 	
@@ -24,10 +24,10 @@ export class FastMatrix4 {
 	
 	static width:number;
 	static height:number;
-	static fromMatrix4(m:any):khaModule.math.FastMatrix4;
-	static orthogonalProjection(left:any, right:any, bottom:any, top:any, zn:any, zf:any):khaModule.math.FastMatrix4;
-	static perspectiveProjection(fovY:any, aspect:any, zn:any, zf:any):khaModule.math.FastMatrix4;
-	static lookAt(eye:any, at:any, up:any):khaModule.math.FastMatrix4;
+	static fromMatrix4(m:khaModule.math.Matrix4):khaModule.math.FastMatrix4;
+	static orthogonalProjection(left:khaModule.FastFloat, right:khaModule.FastFloat, bottom:khaModule.FastFloat, top:khaModule.FastFloat, zn:khaModule.FastFloat, zf:khaModule.FastFloat):khaModule.math.FastMatrix4;
+	static perspectiveProjection(fovY:khaModule.FastFloat, aspect:khaModule.FastFloat, zn:khaModule.FastFloat, zf:khaModule.FastFloat):khaModule.math.FastMatrix4;
+	static lookAt(eye:FastVector3, at:FastVector3, up:FastVector3):khaModule.math.FastMatrix4;
 
 
 }

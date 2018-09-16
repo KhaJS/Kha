@@ -5,7 +5,7 @@ declare namespace kha.graphics4 {
 
 export class VertexElement {
 
-	constructor(name:any, data:any);
+	constructor(name:string, data:khaModule.graphics4.VertexData);
 	name:string;
 	
 

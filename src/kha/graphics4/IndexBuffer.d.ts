@@ -6,7 +6,7 @@ declare namespace kha.graphics4 {
 
 export class IndexBuffer {
 
-	constructor(indexCount:any, usage:any, canRead?:any);
+	constructor(indexCount:number, usage:Usage, canRead?:boolean);
 	
 	_data:khaModule.arrays.Uint32Array;
 	mySize:number;

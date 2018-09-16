@@ -8,7 +8,7 @@ declare namespace kha.js {
 
 export class WebAudioSound extends kha_Sound {
 
-	constructor(filename:any, done:any, failed:any);
+	constructor(filename:string, done:any, failed:any);
 	superUncompress(done:any):void;
 	uncompress(done:any):void;
 

@@ -5,7 +5,7 @@ declare namespace kha.graphics4 {
 
 export class GeometryShader {
 
-	constructor(source:any);
+	constructor(source:khaModule.Blob);
 	delete():void;
 
 

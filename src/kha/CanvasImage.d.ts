@@ -13,9 +13,9 @@ declare namespace kha {
 
 export class CanvasImage extends kha_Image {
 
-	constructor(width:any, height:any, format:any, renderTarget:any);
+	constructor(width:number, height:number, format:TextureFormat, renderTarget:boolean);
 	
-	video:;
+	video:any;
 	
 	myWidth:number;
 	myHeight:number;
@@ -31,19 +31,19 @@ export class CanvasImage extends kha_Image {
 	get_height():number;
 	get_realWidth():number;
 	get_realHeight():number;
-	isOpaque(x:any, y:any):boolean;
-	at(x:any, y:any):Color_Impl_;
+	isOpaque(x:number, y:number):boolean;
+	at(x:number, y:number):Color_Impl_;
 	createImageData():void;
 	
 	createTexture():void;
-	set(stage:any):void;
+	set(stage:number):void;
 	bytes:Bytes;
-	lock(level?:any):Bytes;
+	lock(level?:number):Bytes;
 	unlock():void;
 	unload():void;
 	
 	static init():void;
-	static upperPowerOfTwo(v:any):number;
+	static upperPowerOfTwo(v:number):number;
 
 
 }

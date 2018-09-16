@@ -8,14 +8,14 @@ import * as khaModule from 'kha';
 declare namespace kha.graphics2 {
 
 export class Graphics1 {
-  
-	constructor(canvas:any);
-	canvas:khaModule.Color;
+
+	constructor(canvas:khaModule.Canvas);
+	canvas:khaModule.Canvas;
 	texture:Image;
-	pixels:io.Bytes;
+	pixels:any;
 	begin():void;
 	end():void;
-	setPixel(x:any, y:any, color:any):void;
+	setPixel(x:number, y:number, color:Color_Impl_):void;
 
 
 }

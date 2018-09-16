@@ -16,38 +16,38 @@ declare namespace kha.audio2.ogg.vorbis {
 
 export class VorbisDecoder {
 
-	constructor(header:any, decodeState:any);
-	previousWindow:ds.Vector;
+	constructor(header:Header, decodeState:VorbisDecodeState);
+	previousWindow:any;
 	previousLength:number;
-	finalY:ds.Vector;
-	a:ds.Vector;
-	b:ds.Vector;
-	c:ds.Vector;
-	window:ds.Vector;
-	bitReverseData:ds.Vector;
-	channelBuffers:ds.Vector;
+	finalY:any;
+	a:any;
+	b:any;
+	c:any;
+	window:any;
+	bitReverseData:any;
+	channelBuffers:any;
 	channelBufferStart:number;
 	channelBufferEnd:number;
 	header:Header;
 	currentSample:number;
 	
 	decodeState:VorbisDecodeState;
-	read(output:any, samples:any, channels:any, sampleRate:any, useFloat:any):number;
-	skipSamples(len:any):number;
-	setupSampleNumber(seekFunc:any, inputLength:any):void;
-	seek(seekFunc:any, inputLength:any, sampleNumber:any):void;
-	seekFrameFromPage(seekFunc:any, pageStart:any, firstSample:any, targetSample:any):void;
+	read(output:khaModule.arrays.Float32Array, samples:number, channels:number, sampleRate:number, useFloat:boolean):number;
+	skipSamples(len:number):number;
+	setupSampleNumber(seekFunc:any, inputLength:number):void;
+	seek(seekFunc:any, inputLength:UInt, sampleNumber:number):void;
+	seekFrameFromPage(seekFunc:any, pageStart:number, firstSample:number, targetSample:number):void;
 	clone(seekFunc:any):khaModule.audio2.ogg.vorbis.VorbisDecoder;
 	ensurePosition(seekFunc:any):void;
 	getFrameFloat():number;
 	pumpFirstFrame():void;
-	finishFrame(r:any):number;
-	getWindow(len:any):ds.Vector;
-	initBlocksize(bs:any, n:any):void;
-	inverseMdct(buffer:any, n:any, blocktype:any):void;
+	finishFrame(r:khaModule.audio2.ogg.vorbis.DecodePacketResult):number;
+	getWindow(len:number):any;
+	initBlocksize(bs:number, n:number):void;
+	inverseMdct(buffer:any, n:number, blocktype:boolean):void;
 	decodePacket():khaModule.audio2.ogg.vorbis.DecodePacketResult;
 	decodeInitial():khaModule.audio2.ogg.vorbis.DecodeInitialResult;
-	decodePacketRest(r:any):khaModule.audio2.ogg.vorbis.DecodePacketResult;
+	decodePacketRest(r:khaModule.audio2.ogg.vorbis.DecodeInitialResult):khaModule.audio2.ogg.vorbis.DecodePacketResult;
 	static start(input:any):khaModule.audio2.ogg.vorbis.VorbisDecoder;
 
 

@@ -5,7 +5,7 @@ declare namespace kha.js.graphics4 {
 
 export class TextureUnit {
 
-	constructor(value:any);
+	constructor(value:number);
 	value:number;
 
 

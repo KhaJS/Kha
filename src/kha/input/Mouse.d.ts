@@ -13,8 +13,8 @@ export class Mouse extends kha_network_Controller {
 	constructor();
 	notify(downListener:any, upListener:any, moveListener:any, wheelListener:any, leaveListener?:any):void;
 	remove(downListener:any, upListener:any, moveListener:any, wheelListener:any, leaveListener?:any):void;
-	notifyWindowed(windowId:any, downListener:any, upListener:any, moveListener:any, wheelListener:any, leaveListener?:any):void;
-	removeWindowed(windowId:any, downListener:any, upListener:any, moveListener:any, wheelListener:any, leaveListener?:any):void;
+	notifyWindowed(windowId:number, downListener:any, upListener:any, moveListener:any, wheelListener:any, leaveListener?:any):void;
+	removeWindowed(windowId:number, downListener:any, upListener:any, moveListener:any, wheelListener:any, leaveListener?:any):void;
 	lock():void;
 	unlock():void;
 	canLock():boolean;
@@ -28,14 +28,14 @@ export class Mouse extends kha_network_Controller {
 	windowMoveListeners:Array<any>;
 	windowWheelListeners:Array<any>;
 	windowLeaveListeners:Array<any>;
-	sendLeaveEvent(windowId:any):void;
-	sendDownEvent(windowId:any, button:any, x:any, y:any):void;
-	sendUpEvent(windowId:any, button:any, x:any, y:any):void;
-	sendMoveEvent(windowId:any, x:any, y:any, movementX:any, movementY:any):void;
-	sendWheelEvent(windowId:any, delta:any):void;
-	_receive(bytes:any):void;
+	sendLeaveEvent(windowId:number):void;
+	sendDownEvent(windowId:number, button:number, x:number, y:number):void;
+	sendUpEvent(windowId:number, button:number, x:number, y:number):void;
+	sendMoveEvent(windowId:number, x:number, y:number, movementX:number, movementY:number):void;
+	sendWheelEvent(windowId:number, delta:number):void;
+	_receive(bytes:Bytes):void;
 	
-	static get(num?:any):khaModule.input.Mouse;
+	static get(num?:number):khaModule.input.Mouse;
 	static instance:khaModule.input.Mouse;
 
 

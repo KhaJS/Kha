@@ -15,7 +15,7 @@ export class AudioChannel {
 	get_position():number;
 	volume:number;
 	get_volume():number;
-	set_volume(value:any):number;
+	set_volume(value:number):number;
 	finished:boolean;
 	get_finished():boolean;
 

@@ -18,12 +18,12 @@ export class HdrFormat {
 	static buffer:UInt8Array;
 	static bufferLength:number;
 	static fileOffset:number;
-	static readBuf(buf:any):number;
-	static readBufOffset(buf:any, offset:any, length:any):number;
-	static readPixelsRaw(buffer:any, data:any, offset:any, numpixels:any):void;
-	static readPixelsRawRLE(buffer:any, data:any, offset:any, scanline_width:any, num_scanlines:any):void;
+	static readBuf(buf:UInt8Array):number;
+	static readBufOffset(buf:UInt8Array, offset:number, length:number):number;
+	static readPixelsRaw(buffer:UInt8Array, data:UInt8Array, offset:number, numpixels:number):void;
+	static readPixelsRawRLE(buffer:UInt8Array, data:UInt8Array, offset:number, scanline_width:number, num_scanlines:number):void;
 	static readLine():string;
-	static parse(bytes:any):;
+	static parse(bytes:any):any;
 
 
 }

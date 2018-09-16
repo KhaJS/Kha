@@ -14,7 +14,7 @@ export class Codebook {
 	constructor();
 	dimensions:number;
 	entries:number;
-	codewordLengths:ds.Vector;
+	codewordLengths:any;
 	minimumValue:number;
 	deltaValue:number;
 	valueBits:number;
@@ -22,24 +22,24 @@ export class Codebook {
 	sequenceP:boolean;
 	sparse:boolean;
 	lookupValues:UInt;
-	multiplicands:ds.Vector;
-	codewords:ds.Vector;
-	fastHuffman:ds.Vector;
+	multiplicands:any;
+	codewords:any;
+	fastHuffman:any;
 	sortedCodewords:Array<any>;
-	sortedValues:ds.Vector;
+	sortedValues:any;
 	sortedEntries:number;
-	addEntry(huffCode:any, symbol:any, count:any, len:any, values:any):void;
-	includeInSort(len:any):boolean;
-	computeCodewords(len:any, n:any, values:any):boolean;
+	addEntry(huffCode:UInt, symbol:number, count:number, len:number, values:any):void;
+	includeInSort(len:number):boolean;
+	computeCodewords(len:any, n:number, values:any):boolean;
 	computeSortedHuffman(lengths:any, values:any):void;
 	computeAcceleratedHuffman():void;
-	codebookDecode(decodeState:any, output:any, offset:any, len:any):boolean;
-	codebookDecodeStep(decodeState:any, output:any, offset:any, len:any, step:any):boolean;
-	decodeStart(decodeState:any):number;
-	decodeDeinterleaveRepeat(decodeState:any, residueBuffers:any, ch:any, cInter:any, pInter:any, len:any, totalDecode:any):;
-	residueDecode(decodeState:any, target:any, offset:any, n:any, rtype:any):boolean;
+	codebookDecode(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, output:any, offset:number, len:number):boolean;
+	codebookDecodeStep(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, output:any, offset:number, len:number, step:number):boolean;
+	decodeStart(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState):number;
+	decodeDeinterleaveRepeat(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, residueBuffers:any, ch:number, cInter:number, pInter:number, len:number, totalDecode:number):any;
+	residueDecode(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, target:any, offset:number, n:number, rtype:number):boolean;
 	static NO_CODE:number;
-	static read(decodeState:any):khaModule.audio2.ogg.vorbis.data.Codebook;
+	static read(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState):khaModule.audio2.ogg.vorbis.data.Codebook;
 	static delay:number;
 
 

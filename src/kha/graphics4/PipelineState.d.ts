@@ -18,9 +18,9 @@ export class PipelineState extends kha_graphics4_PipelineStateBase {
 	compile():void;
 	set():void;
 	compileShader(shader:any):void;
-	getConstantLocation(name:any):ConstantLocation;
-	getTextureUnit(name:any):TextureUnit;
-	findTexture(name:any):number;
+	getConstantLocation(name:string):ConstantLocation;
+	getTextureUnit(name:string):TextureUnit;
+	findTexture(name:string):number;
 
 
 }

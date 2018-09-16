@@ -15,7 +15,7 @@ export class Floor {
 	floor0:Floor0;
 	floor1:Floor1;
 	type:number;
-	static read(decodeState:any, codebooks:any):Floor;
+	static read(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, codebooks:any):Floor;
 
 
 }

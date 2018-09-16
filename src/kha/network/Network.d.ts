@@ -6,12 +6,12 @@ declare namespace kha.network {
 
 export class Network {
 
-	constructor(url:any, port:any, errorCallback:any, closeCallback:any);
-	socket:;
+	constructor(url:string, port:number, errorCallback:any, closeCallback:any);
+	socket:any;
 	open:boolean;
-	send(bytes:any, mandatory:any):void;
+	send(bytes:Bytes, mandatory:boolean):void;
 	listen(listener:any):void;
-	static webSocketCloseReason(code:any):string;
+	static webSocketCloseReason(code:number):string;
 
 
 }

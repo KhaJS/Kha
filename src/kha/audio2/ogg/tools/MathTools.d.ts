@@ -5,7 +5,7 @@ declare namespace kha.audio2.ogg.tools {
 
 export class MathTools {
 
-	static ilog(n:any):number;
+	static ilog(n:number):number;
 
 
 }

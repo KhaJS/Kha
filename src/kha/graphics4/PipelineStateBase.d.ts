@@ -37,7 +37,7 @@ export class PipelineStateBase {
 	colorWriteMaskGreen:boolean;
 	colorWriteMaskBlue:boolean;
 	colorWriteMaskAlpha:boolean;
-	set_colorWriteMask(value:any):boolean;
+	set_colorWriteMask(value:boolean):boolean;
 	conservativeRasterization:boolean;
 
 

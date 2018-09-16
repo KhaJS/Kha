@@ -8,11 +8,11 @@ declare namespace kha.js {
 
 export class Sound extends kha_Sound {
 
-	constructor(filenames:any, done:any, failed:any);
+	constructor(filenames:Array<any>, done:any, failed:any);
 	filenames:Array<any>;
-	done(a1:any):void;
-	failed(a1:any):void;
-	element:;
+	done(a1:Sound):void;
+	failed(a1:khaModule.AssetError):void;
+	element:any;
 	errorListener(eventInfo:any):void;
 	canPlayThroughListener(eventInfo:any):void;
 	finishAsset():void;

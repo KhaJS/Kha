@@ -22,25 +22,25 @@ export class Assets {
 	static videos:VideoList;
 	static progress:number;
 	static loadEverything(callback:any, filter?:any, uncompressSoundsFilter?:any, failed?:any):void;
-	static loadImage(name:any, done:any, failed?:any, pos?:any):void;
-	static loadImageFromPath(path:any, readable:any, done:any, failed?:any, pos?:any):void;
+	static loadImage(name:string, done:any, failed?:any, pos?:any):void;
+	static loadImageFromPath(path:string, readable:boolean, done:any, failed?:any, pos?:any):void;
 	static imageFormats:Array<any>;
 	static get_imageFormats():Array<any>;
-	static loadBlob(name:any, done:any, failed?:any, pos?:any):void;
-	static loadBlobFromPath(path:any, done:any, failed?:any, pos?:any):void;
-	static loadSound(name:any, done:any, failed?:any, pos?:any):void;
-	static loadSoundFromPath(path:any, done:any, failed?:any, pos?:any):void;
+	static loadBlob(name:string, done:any, failed?:any, pos?:any):void;
+	static loadBlobFromPath(path:string, done:any, failed?:any, pos?:any):void;
+	static loadSound(name:string, done:any, failed?:any, pos?:any):void;
+	static loadSoundFromPath(path:string, done:any, failed?:any, pos?:any):void;
 	static soundFormats:Array<any>;
 	static get_soundFormats():Array<any>;
-	static loadFont(name:any, done:any, failed?:any, pos?:any):void;
-	static loadFontFromPath(path:any, done:any, failed?:any, pos?:any):void;
+	static loadFont(name:string, done:any, failed?:any, pos?:any):void;
+	static loadFontFromPath(path:string, done:any, failed?:any, pos?:any):void;
 	static fontFormats:Array<any>;
 	static get_fontFormats():Array<any>;
-	static loadVideo(name:any, done:any, failed?:any, pos?:any):void;
-	static loadVideoFromPath(path:any, done:any, failed?:any, pos?:any):void;
+	static loadVideo(name:string, done:any, failed?:any, pos?:any):void;
+	static loadVideoFromPath(path:string, done:any, failed?:any, pos?:any):void;
 	static videoFormats:Array<any>;
 	static get_videoFormats():Array<any>;
-	static reporter(custom:any, pos?:any):;
+	static reporter(custom:any, pos?:any):any;
 
 
 }

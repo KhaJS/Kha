@@ -7,14 +7,14 @@ export class Floor1 {
 
 	constructor();
 	partitions:number;
-	partitionClassList:ds.Vector;
-	classDimensions:ds.Vector;
-	classSubclasses:ds.Vector;
-	classMasterbooks:ds.Vector;
-	subclassBooks:ds.Vector;
-	xlist:ds.Vector;
-	sortedOrder:ds.Vector;
-	neighbors:ds.Vector;
+	partitionClassList:any;
+	classDimensions:any;
+	classSubclasses:any;
+	classMasterbooks:any;
+	subclassBooks:any;
+	xlist:any;
+	sortedOrder:any;
+	neighbors:any;
 	floor1Multiplier:number;
 	rangebits:number;
 	values:number;

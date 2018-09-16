@@ -6,7 +6,7 @@ declare namespace kha._Assets {
 export class BlobList {
 
 	constructor();
-	get(name:any):khaModule.Blob;
+	get(name:string):khaModule.Blob;
 	names:Array<any>;
 
 

@@ -8,16 +8,16 @@ export class Video {
 	constructor();
 	width():number;
 	height():number;
-	play(loop?:any):void;
+	play(loop?:boolean):void;
 	pause():void;
 	stop():void;
 	getLength():number;
 	getCurrentPos():number;
 	position:number;
 	get_position():number;
-	set_position(value:any):number;
+	set_position(value:number):number;
 	getVolume():number;
-	setVolume(volume:any):void;
+	setVolume(volume:number):void;
 	isFinished():boolean;
 	unload():void;
 

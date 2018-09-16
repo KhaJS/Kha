@@ -7,7 +7,7 @@ export class Stbtt_pack_range {
 
 	font_size:number;
 	first_unicode_codepoint_in_range:number;
-	array_of_unicode_codepoints:ds.Vector;
+	array_of_unicode_codepoints:any;
 	num_chars:number;
 	chardata_for_range:khaModule.graphics2.truetype.Stbtt_packedchar;
 	h_oversample:number;

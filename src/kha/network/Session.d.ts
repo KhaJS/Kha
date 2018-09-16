@@ -14,7 +14,7 @@ declare namespace kha.network {
 
 export class Session {
 
-	constructor(maxPlayers:any, address:any, port:any);
+	constructor(maxPlayers:number, address:string, port:number);
 	entities:Map;
 	controllers:Map;
 	maxPlayers:number;
@@ -31,17 +31,17 @@ export class Session {
 	pingTaskId:number;
 	me:Client;
 	get_me():Client;
-	addEntity(entity:any):void;
-	addController(controller:any):void;
-	sendControllerUpdate(id:any, bytes:any):void;
+	addEntity(entity:khaModule.network.Entity):void;
+	addController(controller:khaModule.network.Controller):void;
+	sendControllerUpdate(id:number, bytes:Bytes):void;
 	sendPing():void;
 	sendPlayerUpdate():void;
-	receive(bytes:any, client?:any):void;
-	executeRPC(bytes:any):void;
+	receive(bytes:Bytes, client?:any):void;
+	executeRPC(bytes:Bytes):void;
 	waitForStart(callback:any, refuseCallback:any, errorCallback:any, closeCallback:any, resCallback:any):void;
 	reset():void;
 	update():void;
-	sendToServer(bytes:any):void;
+	sendToServer(bytes:Bytes):void;
 	static START:number;
 	static ENTITY_UPDATES:number;
 	static CONTROLLER_UPDATES:number;

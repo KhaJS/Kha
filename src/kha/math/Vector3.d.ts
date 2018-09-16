@@ -5,13 +5,13 @@ declare namespace kha.math {
 
 export class Vector3 {
 
-	constructor(x?:any, y?:any, z?:any);
+	constructor(x?:number, y?:number, z?:number);
 	x:number;
 	y:number;
 	z:number;
 	length:number;
 	get_length():number;
-	set_length(length:any):number;
+	set_length(length:number):number;
 
 
 }

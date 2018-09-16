@@ -5,7 +5,7 @@ declare namespace kha.math {
 
 export class FastMatrix3 {
 
-	constructor(_00:any, _10:any, _20:any, _01:any, _11:any, _21:any, _02:any, _12:any, _22:any);
+	constructor(_00:khaModule.FastFloat, _10:khaModule.FastFloat, _20:khaModule.FastFloat, _01:khaModule.FastFloat, _11:khaModule.FastFloat, _21:khaModule.FastFloat, _02:khaModule.FastFloat, _12:khaModule.FastFloat, _22:khaModule.FastFloat);
 	
 	
 	
@@ -17,7 +17,7 @@ export class FastMatrix3 {
 	
 	static width:number;
 	static height:number;
-	static fromMatrix3(m:any):khaModule.math.FastMatrix3;
+	static fromMatrix3(m:khaModule.math.Matrix3):khaModule.math.FastMatrix3;
 
 
 }

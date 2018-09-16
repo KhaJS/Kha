@@ -12,7 +12,7 @@ export class Floor0 {
 	amplitudeBits:number;
 	amplitudeOffset:number;
 	numberOfBooks:number;
-	bookList:ds.Vector;
+	bookList:any;
 
 
 }

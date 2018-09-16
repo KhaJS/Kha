@@ -8,19 +8,19 @@ declare namespace kha {
 
 export class KravurImage {
 
-	constructor(size:any, ascent:any, descent:any, lineGap:any, width:any, height:any, chars:any, pixels:any);
+	constructor(size:number, ascent:number, descent:number, lineGap:number, width:number, height:number, chars:any, pixels:khaModule.Blob);
 	mySize:number;
-	chars:ds.Vector;
+	chars:any;
 	texture:Image;
 	width:number;
 	height:number;
 	baseline:number;
 	getTexture():Image;
-	getBakedQuad(q:any, char_index:any, xpos:any, ypos:any):khaModule.AlignedQuad;
-	getCharWidth(charIndex:any):number;
+	getBakedQuad(q:khaModule.AlignedQuad, char_index:number, xpos:number, ypos:number):khaModule.AlignedQuad;
+	getCharWidth(charIndex:number):number;
 	getHeight():number;
-	stringWidth(string:any):number;
-	charactersWidth(characters:any, start:any, length:any):number;
+	stringWidth(string:string):number;
+	charactersWidth(characters:Array<any>, start:number, length:number):number;
 	getBaselinePosition():number;
 	static gaps:Array<any>;
 

@@ -5,10 +5,10 @@ declare namespace kha.js {
 
 export class MobileWebAudio {
 
-	static _context:;
+	static _context:any;
 	static _init():void;
-	static play(sound:any, loop?:any):AudioChannel;
-	static stream(sound:any, loop?:any):AudioChannel;
+	static play(sound:khaModule.js.Sound, loop?:boolean):AudioChannel;
+	static stream(sound:khaModule.js.Sound, loop?:boolean):AudioChannel;
 
 
 }

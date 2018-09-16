@@ -6,7 +6,7 @@ declare namespace kha._Assets {
 export class ImageList {
 
 	constructor();
-	get(name:any):khaModule.Image;
+	get(name:string):khaModule.Image;
 	names:Array<any>;
 
 

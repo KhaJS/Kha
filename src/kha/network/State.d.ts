@@ -5,9 +5,9 @@ declare namespace kha.network {
 
 export class State {
 
-	constructor(time:any, data:any);
+	constructor(time:number, data:any);
 	time:number;
-	data:io.Bytes;
+	data:any;
 
 
 }

@@ -8,7 +8,7 @@ declare namespace kha.audio2.ogg.vorbis {
 
 export class Reader {
 
-	constructor(input:any, seekFunc:any, inputLength:any);
+	constructor(input:Input, seekFunc:any, inputLength:number);
 	decoder:VorbisDecoder;
 	header:khaModule.audio2.ogg.vorbis.data.Header;
 	get_header():khaModule.audio2.ogg.vorbis.data.Header;
@@ -18,21 +18,21 @@ export class Reader {
 	get_totalMillisecond():number;
 	currentSample:number;
 	get_currentSample():number;
-	set_currentSample(value:any):number;
+	set_currentSample(value:number):number;
 	currentMillisecond:number;
 	get_currentMillisecond():number;
-	set_currentMillisecond(value:any):number;
+	set_currentMillisecond(value:number):number;
 	
 	
-	seekFunc(a1:any):void;
+	seekFunc(a1:number):void;
 	inputLength:number;
-	read(output:any, samples?:any, channels?:any, sampleRate?:any, useFloat?:any):number;
+	read(output:khaModule.arrays.Float32Array, samples?:any, channels?:any, sampleRate?:any, useFloat?:boolean):number;
 	clone():khaModule.audio2.ogg.vorbis.Reader;
-	sampleToMillisecond(samples:any):number;
-	millisecondToSample(millseconds:any):number;
-	static openFromBytes(bytes:any):khaModule.audio2.ogg.vorbis.Reader;
-	static seekBytes(bytes:any, pos:any):void;
-	static readAll(bytes:any, output:any, useFloat?:any):khaModule.audio2.ogg.vorbis.data.Header;
+	sampleToMillisecond(samples:number):number;
+	millisecondToSample(millseconds:number):number;
+	static openFromBytes(bytes:Bytes):khaModule.audio2.ogg.vorbis.Reader;
+	static seekBytes(bytes:BytesInput, pos:number):void;
+	static readAll(bytes:Bytes, output:any, useFloat?:boolean):khaModule.audio2.ogg.vorbis.data.Header;
 
 
 }

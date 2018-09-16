@@ -12,7 +12,7 @@ declare namespace kha.graphics4 {
 
 export class ImageShaderPainter {
 
-	constructor(g4:any);
+	constructor(g4:Graphics);
 	projectionMatrix:khaModule.math.FastMatrix4;
 	bilinear:boolean;
 	bilinearMipmaps:boolean;
@@ -24,18 +24,18 @@ export class ImageShaderPainter {
 	
 	
 	get_pipeline():khaModule.graphics4.PipelineState;
-	set_pipeline(pipe:any):khaModule.graphics4.PipelineState;
-	setProjection(projectionMatrix:any):void;
+	set_pipeline(pipe:khaModule.graphics4.PipelineState):khaModule.graphics4.PipelineState;
+	setProjection(projectionMatrix:khaModule.math.FastMatrix4):void;
 	initBuffers():void;
-	setRectVertices(bottomleftx:any, bottomlefty:any, topleftx:any, toplefty:any, toprightx:any, toprighty:any, bottomrightx:any, bottomrighty:any):void;
-	setRectTexCoords(left:any, top:any, right:any, bottom:any):void;
-	setRectColor(r:any, g:any, b:any, a:any):void;
+	setRectVertices(bottomleftx:khaModule.FastFloat, bottomlefty:khaModule.FastFloat, topleftx:khaModule.FastFloat, toplefty:khaModule.FastFloat, toprightx:khaModule.FastFloat, toprighty:khaModule.FastFloat, bottomrightx:khaModule.FastFloat, bottomrighty:khaModule.FastFloat):void;
+	setRectTexCoords(left:khaModule.FastFloat, top:khaModule.FastFloat, right:khaModule.FastFloat, bottom:khaModule.FastFloat):void;
+	setRectColor(r:khaModule.FastFloat, g:khaModule.FastFloat, b:khaModule.FastFloat, a:khaModule.FastFloat):void;
 	drawBuffer():void;
-	setBilinearFilter(bilinear:any):void;
-	setBilinearMipmapFilter(bilinear:any):void;
-	drawImage(img:any, bottomleftx:any, bottomlefty:any, topleftx:any, toplefty:any, toprightx:any, toprighty:any, bottomrightx:any, bottomrighty:any, opacity:any, color:any):void;
-	drawImage2(img:any, sx:any, sy:any, sw:any, sh:any, bottomleftx:any, bottomlefty:any, topleftx:any, toplefty:any, toprightx:any, toprighty:any, bottomrightx:any, bottomrighty:any, opacity:any, color:any):void;
-	drawImageScale(img:any, sx:any, sy:any, sw:any, sh:any, left:any, top:any, right:any, bottom:any, opacity:any, color:any):void;
+	setBilinearFilter(bilinear:boolean):void;
+	setBilinearMipmapFilter(bilinear:boolean):void;
+	drawImage(img:khaModule.Image, bottomleftx:khaModule.FastFloat, bottomlefty:khaModule.FastFloat, topleftx:khaModule.FastFloat, toplefty:khaModule.FastFloat, toprightx:khaModule.FastFloat, toprighty:khaModule.FastFloat, bottomrightx:khaModule.FastFloat, bottomrighty:khaModule.FastFloat, opacity:khaModule.FastFloat, color:khaModule.Color):void;
+	drawImage2(img:khaModule.Image, sx:khaModule.FastFloat, sy:khaModule.FastFloat, sw:khaModule.FastFloat, sh:khaModule.FastFloat, bottomleftx:khaModule.FastFloat, bottomlefty:khaModule.FastFloat, topleftx:khaModule.FastFloat, toplefty:khaModule.FastFloat, toprightx:khaModule.FastFloat, toprighty:khaModule.FastFloat, bottomrightx:khaModule.FastFloat, bottomrighty:khaModule.FastFloat, opacity:khaModule.FastFloat, color:khaModule.Color):void;
+	drawImageScale(img:khaModule.Image, sx:khaModule.FastFloat, sy:khaModule.FastFloat, sw:khaModule.FastFloat, sh:khaModule.FastFloat, left:khaModule.FastFloat, top:khaModule.FastFloat, right:khaModule.FastFloat, bottom:khaModule.FastFloat, opacity:khaModule.FastFloat, color:khaModule.Color):void;
 	end():void;
 	static shaderPipeline:khaModule.graphics4.PipelineState;
 	static structure:khaModule.graphics4.VertexStructure;

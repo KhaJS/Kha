@@ -15,11 +15,11 @@ export class Residue {
 	partSize:UInt;
 	classifications:number;
 	classbook:number;
-	classdata:ds.Vector;
-	residueBooks:ds.Vector;
+	classdata:any;
+	residueBooks:any;
 	type:number;
-	decode(decodeState:any, header:any, residueBuffers:any, ch:any, n:any, doNotDecode:any, channelBuffers:any):void;
-	static read(decodeState:any, codebooks:any):khaModule.audio2.ogg.vorbis.data.Residue;
+	decode(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, header:khaModule.audio2.ogg.vorbis.data.Header, residueBuffers:any, ch:number, n:number, doNotDecode:any, channelBuffers:any):void;
+	static read(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, codebooks:any):khaModule.audio2.ogg.vorbis.data.Residue;
 
 
 }

@@ -5,9 +5,9 @@ declare namespace kha.network {
 
 export class LocalClient {
 
-	constructor(id:any);
+	constructor(id:number);
 	myId:number;
-	send(bytes:any, mandatory:any):void;
+	send(bytes:any, mandatory:boolean):void;
 	receive(receiver:any):void;
 	onClose(close:any):void;
 	controllers:Array<any>;

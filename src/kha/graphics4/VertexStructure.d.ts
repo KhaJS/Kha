@@ -9,11 +9,11 @@ export class VertexStructure {
 	constructor();
 	elements:Array<any>;
 	instanced:boolean;
-	add(name:any, data:any):void;
+	add(name:string, data:khaModule.graphics4.VertexData):void;
 	size():number;
 	byteSize():number;
-	dataByteSize(data:any):number;
-	get(index:any):VertexElement;
+	dataByteSize(data:khaModule.graphics4.VertexData):number;
+	get(index:number):VertexElement;
 
 
 }

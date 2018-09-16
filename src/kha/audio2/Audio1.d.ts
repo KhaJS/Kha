@@ -8,19 +8,19 @@ declare namespace kha.audio2 {
 export class Audio1 {
 
 	static channelCount:number;
-	static soundChannels:ds.Vector;
-	static streamChannels:ds.Vector;
-	static internalSoundChannels:ds.Vector;
-	static internalStreamChannels:ds.Vector;
+	static soundChannels:any;
+	static streamChannels:any;
+	static internalSoundChannels:any;
+	static internalStreamChannels:any;
 	static sampleCache1:khaModule.arrays.Float32Array;
 	static sampleCache2:khaModule.arrays.Float32Array;
 	static _init():void;
-	static max(a:any, b:any):number;
-	static min(a:any, b:any):number;
-	static mix(samples:any, buffer:any):void;
-	static play(sound:any, loop?:any):AudioChannel;
-	static _playAgain(channel:any):void;
-	static stream(sound:any, loop?:any):AudioChannel;
+	static max(a:number, b:number):number;
+	static min(a:number, b:number):number;
+	static mix(samples:number, buffer:khaModule.audio2.Buffer):void;
+	static play(sound:khaModule.Sound, loop?:boolean):AudioChannel;
+	static _playAgain(channel:AudioChannel):void;
+	static stream(sound:khaModule.Sound, loop?:boolean):AudioChannel;
 
 
 }

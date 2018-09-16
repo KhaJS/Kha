@@ -6,11 +6,11 @@ declare namespace kha.js {
 
 export class MobileWebAudioChannel {
 
-	constructor(sound:any, loop:any);
-	buffer:;
+	constructor(sound:khaModule.js.MobileWebAudioSound, loop:boolean);
+	buffer:any;
 	loop:boolean;
-	source:;
-	gain:;
+	source:any;
+	gain:any;
 	startTime:number;
 	pauseTime:number;
 	paused:boolean;
@@ -25,7 +25,7 @@ export class MobileWebAudioChannel {
 	get_position():number;
 	volume:number;
 	get_volume():number;
-	set_volume(value:any):number;
+	set_volume(value:number):number;
 	finished:boolean;
 	get_finished():boolean;
 

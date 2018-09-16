@@ -17,12 +17,12 @@ export class Keyboard extends kha_network_Controller {
 	downListeners:Array<any>;
 	upListeners:Array<any>;
 	pressListeners:Array<any>;
-	sendDownEvent(code:any):void;
-	sendUpEvent(code:any):void;
-	sendPressEvent(char:any):void;
-	_receive(bytes:any):void;
+	sendDownEvent(code:khaModule.input.KeyCode):void;
+	sendUpEvent(code:khaModule.input.KeyCode):void;
+	sendPressEvent(char:string):void;
+	_receive(bytes:Bytes):void;
 	
-	static get(num?:any):khaModule.input.Keyboard;
+	static get(num?:number):khaModule.input.Keyboard;
 	static instance:khaModule.input.Keyboard;
 
 

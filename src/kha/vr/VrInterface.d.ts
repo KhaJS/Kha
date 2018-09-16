@@ -7,15 +7,15 @@ export class VrInterface {
 
 	constructor();
 	GetSensorState():khaModule.vr.SensorState;
-	GetPredictedSensorState(time:any):khaModule.vr.SensorState;
+	GetPredictedSensorState(time:number):khaModule.vr.SensorState;
 	WarpSwapBlack():void;
 	WarpSwapLoadingIcon():void;
-	WarpSwap(parms:any):void;
+	WarpSwap(parms:khaModule.vr.TimeWarpParms):void;
 	IsPresenting():boolean;
 	IsVrEnabled():boolean;
 	GetTimeInSeconds():number;
-	GetProjectionMatrix(eye:any):khaModule.math.FastMatrix4;
-	GetViewMatrix(eye:any):khaModule.math.FastMatrix4;
+	GetProjectionMatrix(eye:number):khaModule.math.FastMatrix4;
+	GetViewMatrix(eye:number):khaModule.math.FastMatrix4;
 	onVRRequestPresent():void;
 	onVRExitPresent():void;
 	onResetPose():void;

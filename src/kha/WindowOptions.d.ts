@@ -5,7 +5,7 @@ declare namespace kha {
 
 export class WindowOptions {
 
-	constructor(width:any, height:any, mode?:any, title?:any, x?:any, y?:any, targetDisplay?:any, rendererOptions?:any, windowedModeOptions?:any);
+	constructor(width:number, height:number, mode?:any, title?:any, x?:any, y?:any, targetDisplay?:any, rendererOptions?:any, windowedModeOptions?:any);
 	width:number;
 	height:number;
 	

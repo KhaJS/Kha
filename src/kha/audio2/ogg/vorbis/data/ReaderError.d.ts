@@ -5,7 +5,7 @@ declare namespace kha.audio2.ogg.vorbis.data {
 
 export class ReaderError {
 
-	constructor(type:any, message?:any, posInfos?:any);
+	constructor(type:khaModule.audio2.ogg.vorbis.data.ReaderErrorType, message?:any, posInfos?:any);
 	
 	message:string;
 	

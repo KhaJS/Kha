@@ -19,7 +19,7 @@ declare namespace kha.graphics4 {
 
 export class Graphics2 extends kha_graphics2_Graphics {
 
-	constructor(canvas:any);
+	constructor(canvas:khaModule.Canvas);
 	myColor:khaModule.Color;
 	
 	projectionMatrix:FastMatrix4;
@@ -29,42 +29,42 @@ export class Graphics2 extends kha_graphics2_Graphics {
 	canvas:khaModule.Canvas;
 	g:Graphics;
 	setProjection():void;
-	drawImage(img:any, x:any, y:any):void;
-	drawScaledSubImage(img:any, sx:any, sy:any, sw:any, sh:any, dx:any, dy:any, dw:any, dh:any):void;
+	drawImage(img:Image, x:khaModule.FastFloat, y:khaModule.FastFloat):void;
+	drawScaledSubImage(img:Image, sx:khaModule.FastFloat, sy:khaModule.FastFloat, sw:khaModule.FastFloat, sh:khaModule.FastFloat, dx:khaModule.FastFloat, dy:khaModule.FastFloat, dw:khaModule.FastFloat, dh:khaModule.FastFloat):void;
 	get_color():khaModule.Color;
-	set_color(color:any):khaModule.Color;
-	drawRect(x:any, y:any, width:any, height:any, strength?:any):void;
-	fillRect(x:any, y:any, width:any, height:any):void;
-	drawString(text:any, x:any, y:any):void;
-	drawCharacters(text:any, start:any, length:any, x:any, y:any):void;
+	set_color(color:khaModule.Color):khaModule.Color;
+	drawRect(x:number, y:number, width:number, height:number, strength?:number):void;
+	fillRect(x:number, y:number, width:number, height:number):void;
+	drawString(text:string, x:number, y:number):void;
+	drawCharacters(text:Array<any>, start:number, length:number, x:number, y:number):void;
 	get_font():khaModule.Font;
-	set_font(font:any):khaModule.Font;
-	set_fontSize(value:any):number;
-	drawLine(x1:any, y1:any, x2:any, y2:any, strength?:any):void;
-	fillTriangle(x1:any, y1:any, x2:any, y2:any, x3:any, y3:any):void;
+	set_font(font:khaModule.Font):khaModule.Font;
+	set_fontSize(value:number):number;
+	drawLine(x1:number, y1:number, x2:number, y2:number, strength?:number):void;
+	fillTriangle(x1:number, y1:number, x2:number, y2:number, x3:number, y3:number):void;
 	
 	get_imageScaleQuality():ImageScaleQuality;
-	set_imageScaleQuality(value:any):ImageScaleQuality;
+	set_imageScaleQuality(value:ImageScaleQuality):ImageScaleQuality;
 	
 	get_mipmapScaleQuality():ImageScaleQuality;
-	set_mipmapScaleQuality(value:any):ImageScaleQuality;
-	setPipeline(pipeline:any):void;
-	scissor(x:any, y:any, width:any, height:any):void;
+	set_mipmapScaleQuality(value:ImageScaleQuality):ImageScaleQuality;
+	setPipeline(pipeline:PipelineState):void;
+	scissor(x:number, y:number, width:number, height:number):void;
 	disableScissor():void;
-	begin(clear?:any, clearColor?:any):void;
+	begin(clear?:boolean, clearColor?:any):void;
 	clear(color?:any):void;
 	flush():void;
 	end():void;
-	drawVideoInternal(video:any, x:any, y:any, width:any, height:any):void;
-	drawVideo(video:any, x:any, y:any, width:any, height:any):void;
+	drawVideoInternal(video:khaModule.Video, x:number, y:number, width:number, height:number):void;
+	drawVideo(video:khaModule.Video, x:number, y:number, width:number, height:number):void;
 	static videoPipeline:PipelineState;
-	static upperPowerOfTwo(v:any):number;
+	static upperPowerOfTwo(v:number):number;
 	static createImageVertexStructure():VertexStructure;
-	static createImagePipeline(structure:any):PipelineState;
+	static createImagePipeline(structure:VertexStructure):PipelineState;
 	static createColoredVertexStructure():VertexStructure;
-	static createColoredPipeline(structure:any):PipelineState;
+	static createColoredPipeline(structure:VertexStructure):PipelineState;
 	static createTextVertexStructure():VertexStructure;
-	static createTextPipeline(structure:any):PipelineState;
+	static createTextPipeline(structure:VertexStructure):PipelineState;
 
 
 }

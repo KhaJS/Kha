@@ -16,24 +16,24 @@ declare namespace kha.audio2.ogg.vorbis.data {
 export class Header {
 
 	constructor();
-	maximumBitRate:;
-	nominalBitRate:;
-	minimumBitRate:;
-	sampleRate:;
+	maximumBitRate:any;
+	nominalBitRate:any;
+	minimumBitRate:any;
+	sampleRate:any;
 	channel:number;
 	blocksize0:number;
 	blocksize1:number;
-	codebooks:ds.Vector;
-	floorConfig:ds.Vector;
-	residueConfig:ds.Vector;
-	mapping:ds.Vector;
-	modes:ds.Vector;
+	codebooks:any;
+	floorConfig:any;
+	residueConfig:any;
+	mapping:any;
+	modes:any;
 	comment:Comment;
 	vendor:string;
 	static PACKET_ID:number;
 	static PACKET_COMMENT:number;
 	static PACKET_SETUP:number;
-	static read(decodeState:any):khaModule.audio2.ogg.vorbis.data.Header;
+	static read(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState):khaModule.audio2.ogg.vorbis.data.Header;
 
 
 }

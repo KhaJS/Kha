@@ -5,7 +5,7 @@ declare namespace kha.audio2 {
 
 export class Buffer {
 
-	constructor(size:any, channels:any, samplesPerSecond:any);
+	constructor(size:number, channels:number, samplesPerSecond:number);
 	channels:number;
 	samplesPerSecond:number;
 	data:khaModule.arrays.Float32Array;

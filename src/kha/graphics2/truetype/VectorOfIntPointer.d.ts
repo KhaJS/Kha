@@ -6,7 +6,7 @@ declare namespace kha.graphics2.truetype {
 export class VectorOfIntPointer {
 
 	constructor();
-	value:ds.Vector;
+	value:any;
 
 
 }

@@ -10,8 +10,8 @@ export class Page {
 	constructor();
 	flag:number;
 	clone():khaModule.audio2.ogg.vorbis.data.Page;
-	start(decodeState:any):void;
-	startWithoutCapturePattern(decodeState:any):void;
+	start(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState):void;
+	startWithoutCapturePattern(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState):void;
 
 
 }

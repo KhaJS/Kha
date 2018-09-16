@@ -5,7 +5,7 @@ declare namespace kha.graphics4 {
 
 export class TessellationEvaluationShader {
 
-	constructor(source:any, file:any);
+	constructor(source:khaModule.Blob, file:string);
 	delete():void;
 
 

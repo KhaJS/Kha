@@ -6,13 +6,13 @@ declare namespace kha.audio2 {
 
 export class AudioChannel {
 
-	constructor(looping:any);
+	constructor(looping:boolean);
 	data:khaModule.arrays.Float32Array;
 	myVolume:number;
 	myPosition:number;
 	paused:boolean;
 	looping:boolean;
-	nextSamples(samples:any, length:any, sampleRate:any):void;
+	nextSamples(samples:khaModule.arrays.Float32Array, length:number, sampleRate:number):void;
 	play():void;
 	pause():void;
 	stop():void;
@@ -22,7 +22,7 @@ export class AudioChannel {
 	get_position():number;
 	volume:number;
 	get_volume():number;
-	set_volume(value:any):number;
+	set_volume(value:number):number;
 	finished:boolean;
 	get_finished():boolean;
 

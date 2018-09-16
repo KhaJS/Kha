@@ -10,16 +10,16 @@ declare namespace kha.js {
 
 export class Font {
 
-	constructor(blob:any);
+	constructor(blob:Blob);
 	kravur:khaModule.Kravur;
 	images:Map;
-	height(fontSize:any):number;
-	width(fontSize:any, str:any):number;
-	widthOfCharacters(fontSize:any, characters:any, start:any, length:any):number;
-	baseline(fontSize:any):number;
-	getImage(fontSize:any, color:any, glyphs?:any):;
+	height(fontSize:number):number;
+	width(fontSize:number, str:string):number;
+	widthOfCharacters(fontSize:number, characters:Array<any>, start:number, length:number):number;
+	baseline(fontSize:number):number;
+	getImage(fontSize:number, color:khaModule.Color, glyphs?:any):any;
 	unload():void;
-	static fromBytes(bytes:any):khaModule.js.Font;
+	static fromBytes(bytes:Bytes):khaModule.js.Font;
 
 
 }

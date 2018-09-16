@@ -17,7 +17,7 @@ declare namespace kha.graphics4 {
 
 export class TextShaderPainter {
 
-	constructor(g4:any);
+	constructor(g4:Graphics);
 	projectionMatrix:khaModule.math.FastMatrix4;
 	font:Kravur;
 	g:Graphics;
@@ -30,23 +30,23 @@ export class TextShaderPainter {
 	
 	
 	get_pipeline():khaModule.graphics4.PipelineState;
-	set_pipeline(pipe:any):khaModule.graphics4.PipelineState;
-	setProjection(projectionMatrix:any):void;
+	set_pipeline(pipe:khaModule.graphics4.PipelineState):khaModule.graphics4.PipelineState;
+	setProjection(projectionMatrix:khaModule.math.FastMatrix4):void;
 	initBuffers():void;
-	setRectVertices(bottomleftx:any, bottomlefty:any, topleftx:any, toplefty:any, toprightx:any, toprighty:any, bottomrightx:any, bottomrighty:any):void;
-	setRectTexCoords(left:any, top:any, right:any, bottom:any):void;
-	setRectColors(opacity:any, color:any):void;
+	setRectVertices(bottomleftx:number, bottomlefty:number, topleftx:number, toplefty:number, toprightx:number, toprighty:number, bottomrightx:number, bottomrighty:number):void;
+	setRectTexCoords(left:number, top:number, right:number, bottom:number):void;
+	setRectColors(opacity:khaModule.FastFloat, color:khaModule.Color):void;
 	drawBuffer():void;
-	setBilinearFilter(bilinear:any):void;
-	setFont(font:any):void;
+	setBilinearFilter(bilinear:boolean):void;
+	setFont(font:khaModule.Font):void;
 	text:string;
-	startString(text:any):void;
-	charCodeAt(position:any):number;
+	startString(text:string):void;
+	charCodeAt(position:number):number;
 	stringLength():number;
 	endString():void;
 	bakedQuadCache:AlignedQuad;
-	drawString(text:any, opacity:any, color:any, x:any, y:any, transformation:any, fontGlyphs:any):void;
-	drawCharacters(text:any, start:any, length:any, opacity:any, color:any, x:any, y:any, transformation:any, fontGlyphs:any):void;
+	drawString(text:string, opacity:khaModule.FastFloat, color:khaModule.Color, x:number, y:number, transformation:khaModule.math.FastMatrix3, fontGlyphs:Array<any>):void;
+	drawCharacters(text:Array<any>, start:number, length:number, opacity:khaModule.FastFloat, color:khaModule.Color, x:number, y:number, transformation:khaModule.math.FastMatrix3, fontGlyphs:Array<any>):void;
 	end():void;
 	static shaderPipeline:khaModule.graphics4.PipelineState;
 	static structure:khaModule.graphics4.VertexStructure;
@@ -57,7 +57,7 @@ export class TextShaderPainter {
 	static indexBuffer:IndexBuffer;
 	static lastTexture:khaModule.Image;
 	static initShaders():void;
-	static findIndex(charcode:any, fontGlyphs:any):number;
+	static findIndex(charcode:number, fontGlyphs:Array<any>):number;
 
 
 }

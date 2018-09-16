@@ -6,7 +6,7 @@ declare namespace kha._Assets {
 export class SoundList {
 
 	constructor();
-	get(name:any):khaModule.Sound;
+	get(name:string):khaModule.Sound;
 	names:Array<any>;
 
 

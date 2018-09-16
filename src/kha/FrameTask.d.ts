@@ -5,7 +5,7 @@ declare namespace kha {
 
 export class FrameTask {
 
-	constructor(task:any, priority:any, id:any);
+	constructor(task:any, priority:number, id:number);
 	task():boolean;
 	priority:number;
 	id:number;

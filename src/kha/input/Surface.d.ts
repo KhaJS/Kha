@@ -11,10 +11,10 @@ export class Surface {
 	touchStartListeners:Array<any>;
 	touchEndListeners:Array<any>;
 	moveListeners:Array<any>;
-	sendTouchStartEvent(index:any, x:any, y:any):void;
-	sendTouchEndEvent(index:any, x:any, y:any):void;
-	sendMoveEvent(index:any, x:any, y:any):void;
-	static get(num?:any):khaModule.input.Surface;
+	sendTouchStartEvent(index:number, x:number, y:number):void;
+	sendTouchEndEvent(index:number, x:number, y:number):void;
+	sendMoveEvent(index:number, x:number, y:number):void;
+	static get(num?:number):khaModule.input.Surface;
 	static instance:khaModule.input.Surface;
 
 

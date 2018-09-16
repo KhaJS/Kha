@@ -5,7 +5,7 @@ declare namespace kha.js.graphics4 {
 
 export class ConstantLocation {
 
-	constructor(value:any, type:any);
+	constructor(value:any, type:number);
 	
 	type:number;
 

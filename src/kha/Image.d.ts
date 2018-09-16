@@ -14,16 +14,16 @@ declare namespace kha {
 
 export class Image {
 
-	isOpaque(x:any, y:any):boolean;
-	at(x:any, y:any):khaModule.Color;
+	isOpaque(x:number, y:number):boolean;
+	at(x:number, y:number):khaModule.Color;
 	unload():void;
-	lock(level?:any):io.Bytes;
+	lock(level?:number):any;
 	unlock():void;
-	getPixels():io.Bytes;
-	generateMipmaps(levels:any):void;
-	setMipmaps(mipmaps:any):void;
-	setDepthStencilFrom(image:any):void;
-	clear(x:any, y:any, z:any, width:any, height:any, depth:any, color:any):void;
+	getPixels():any;
+	generateMipmaps(levels:number):void;
+	setMipmaps(mipmaps:Array<any>):void;
+	setDepthStencilFrom(image:Image):void;
+	clear(x:number, y:number, z:number, width:number, height:number, depth:number, color:khaModule.Color):void;
 	width:number;
 	get_width():number;
 	height:number;
@@ -40,14 +40,14 @@ export class Image {
 	get_g2():Graphics;
 	g4:Graphics;
 	get_g4():Graphics;
-	static create(width:any, height:any, format?:any, usage?:any):Image;
-	static create3D(width:any, height:any, depth:any, format?:any, usage?:any):Image;
-	static createRenderTarget(width:any, height:any, format?:any, depthStencil?:any, antiAliasingSamples?:any, contextId?:any):Image;
-	static fromImage(image:any, readable:any):Image;
-	static fromBytes(bytes:any, width:any, height:any, format?:any, usage?:any):Image;
-	static fromBytes3D(bytes:any, width:any, height:any, depth:any, format?:any, usage?:any):Image;
-	static fromEncodedBytes(bytes:any, fileExtention:any, doneCallback:any, errorCallback:any, readable?:any):void;
-	static fromVideo(video:any):Image;
+	static create(width:number, height:number, format?:any, usage?:any):Image;
+	static create3D(width:number, height:number, depth:number, format?:any, usage?:any):Image;
+	static createRenderTarget(width:number, height:number, format?:any, depthStencil?:khaModule.graphics4.DepthStencilFormat, antiAliasingSamples?:number, contextId?:number):Image;
+	static fromImage(image:any, readable:boolean):Image;
+	static fromBytes(bytes:any, width:number, height:number, format?:any, usage?:any):Image;
+	static fromBytes3D(bytes:any, width:number, height:number, depth:number, format?:any, usage?:any):Image;
+	static fromEncodedBytes(bytes:any, fileExtention:string, doneCallback:any, errorCallback:any, readable?:boolean):void;
+	static fromVideo(video:khaModule.js.Video):Image;
 	static maxSize:number;
 	static get_maxSize():number;
 	static nonPow2Supported:boolean;

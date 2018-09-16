@@ -11,7 +11,7 @@ export class Controller {
 	_inputBufferIndex:number;
 	_inputBuffer:Bytes;
 	_id():number;
-	_receive(bytes:any):void;
+	_receive(bytes:Bytes):void;
 
 
 }

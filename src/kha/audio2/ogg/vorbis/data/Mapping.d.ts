@@ -12,12 +12,12 @@ export class Mapping {
 
 	constructor();
 	couplingSteps:number;
-	chan:ds.Vector;
+	chan:any;
 	submaps:number;
-	submapFloor:ds.Vector;
-	submapResidue:ds.Vector;
-	doFloor(floors:any, i:any, n:any, target:any, finalY:any, step2Flag:any):void;
-	static read(decodeState:any, channels:any):Mapping;
+	submapFloor:any;
+	submapResidue:any;
+	doFloor(floors:any, i:number, n:number, target:any, finalY:Array<any>, step2Flag:any):void;
+	static read(decodeState:khaModule.audio2.ogg.vorbis.VorbisDecodeState, channels:number):Mapping;
 
 
 }

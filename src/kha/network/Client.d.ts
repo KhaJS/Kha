@@ -8,7 +8,7 @@ export class Client {
 	
 	get_id():number;
 	id:number;
-	send(bytes:any, mandatory:any):void;
+	send(bytes:any, mandatory:boolean):void;
 	receive(receiver:any):void;
 	onClose(close:any):void;
 

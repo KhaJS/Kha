@@ -6,8 +6,8 @@ declare namespace kha.js {
 export class AudioElementAudio {
 
 	static _compile():void;
-	static play(sound:any, loop?:any):AudioChannel;
-	static stream(sound:any, loop?:any):AudioChannel;
+	static play(sound:khaModule.js.Sound, loop?:boolean):AudioChannel;
+	static stream(sound:khaModule.js.Sound, loop?:boolean):AudioChannel;
 
 
 }

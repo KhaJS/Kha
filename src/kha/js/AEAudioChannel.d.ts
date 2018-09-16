@@ -9,7 +9,7 @@ declare namespace kha.js {
 export class AEAudioChannel {
 
 	constructor(element:any);
-	element:;
+	element:any;
 	stopped:boolean;
 	play():void;
 	pause():void;
@@ -20,7 +20,7 @@ export class AEAudioChannel {
 	get_position():number;
 	volume:number;
 	get_volume():number;
-	set_volume(value:any):number;
+	set_volume(value:number):number;
 	finished:boolean;
 	get_finished():boolean;
 	static todo:Array<any>;

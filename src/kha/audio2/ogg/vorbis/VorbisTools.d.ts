@@ -8,26 +8,26 @@ declare namespace kha.audio2.ogg.vorbis {
 export class VorbisTools {
 
 	static EOP:number;
-	static integerDivideTable:ds.Vector;
+	static integerDivideTable:any;
 	static M__PI:number;
 	static DIVTAB_NUMER:number;
 	static DIVTAB_DENOM:number;
 	static INVERSE_DB_TABLE:Array<any>;
-	static assert(b:any, p?:any):void;
-	static neighbors(x:any, n:any):;
-	static floatUnpack(x:any):number;
-	static bitReverse(n:any):UInt;
-	static pointCompare(a:any, b:any):number;
-	static uintAsc(a:any, b:any):number;
-	static lookup1Values(entries:any, dim:any):number;
-	static computeWindow(n:any, window:any):void;
-	static square(f:any):number;
-	static computeBitReverse(n:any, rev:any):void;
-	static computeTwiddleFactors(n:any, af:any, bf:any, cf:any):void;
-	static drawLine(output:any, x0:any, y0:any, x1:any, y1:any, n:any):void;
-	static predictPoint(x:any, x0:any, x1:any, y0:any, y1:any):number;
-	static emptyFloatVector(len:any):ds.Vector;
-	static copyVector(source:any):ds.Vector;
+	static assert(b:boolean, p?:any):void;
+	static neighbors(x:any, n:number):any;
+	static floatUnpack(x:UInt):number;
+	static bitReverse(n:UInt):UInt;
+	static pointCompare(a:khaModule.audio2.ogg.vorbis.data.IntPoint, b:khaModule.audio2.ogg.vorbis.data.IntPoint):number;
+	static uintAsc(a:UInt, b:UInt):number;
+	static lookup1Values(entries:number, dim:number):number;
+	static computeWindow(n:number, window:any):void;
+	static square(f:number):number;
+	static computeBitReverse(n:number, rev:any):void;
+	static computeTwiddleFactors(n:number, af:any, bf:any, cf:any):void;
+	static drawLine(output:any, x0:number, y0:number, x1:number, y1:number, n:number):void;
+	static predictPoint(x:number, x0:number, x1:number, y0:number, y1:number):number;
+	static emptyFloatVector(len:number):any;
+	static copyVector(source:any):any;
 
 
 }

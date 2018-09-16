@@ -38,7 +38,7 @@ export class SystemImpl {
 	
 	
 	static _hasWebAudio:boolean;
-	static khanvas:;
+	static khanvas:any;
 	
 	static mobile:boolean;
 	static ios:boolean;
@@ -47,16 +47,16 @@ export class SystemImpl {
 	static firefox:boolean;
 	static ie:boolean;
 	static insideInputEvent:boolean;
-	static errorHandler(message:any, source:any, lineno:any, colno:any, error:any):boolean;
-	static init(options:any, callback:any):void;
-	static initEx(title:any, options:any, windowCallback:any, callback:any):void;
+	static errorHandler(message:string, source:string, lineno:number, colno:number, error:any):boolean;
+	static init(options:khaModule.SystemOptions, callback:any):void;
+	static initEx(title:string, options:Array<any>, windowCallback:any, callback:any):void;
 	static isMobile():boolean;
 	static isIOS():boolean;
 	static isChrome():boolean;
 	static isFirefox():boolean;
 	static isIE():boolean;
-	static windowWidth(windowId?:any):number;
-	static windowHeight(windowId?:any):number;
+	static windowWidth(windowId?:number):number;
+	static windowHeight(windowId?:number):number;
 	static screenDpi():number;
 	static setCanvas(canvas:any):void;
 	static getScreenRotation():ScreenRotation;
@@ -82,9 +82,9 @@ export class SystemImpl {
 	static lastFirstTouchX:number;
 	static lastFirstTouchY:number;
 	static init2(backbufferFormat?:any):void;
-	static getMouse(num:any):Mouse;
-	static getKeyboard(num:any):Keyboard;
-	static checkGamepad(pad:any):void;
+	static getMouse(num:number):Mouse;
+	static getKeyboard(num:number):Keyboard;
+	static checkGamepad(pad:Gamepad):void;
 	static loadFinished():void;
 	static lockMouse():void;
 	static unlockMouse():void;
@@ -114,7 +114,7 @@ export class SystemImpl {
 	static touchCancel(event:any):void;
 	static onBlur():void;
 	static onFocus():void;
-	static keycodeToChar(key:any, keycode:any, shift:any):string;
+	static keycodeToChar(key:string, keycode:number, shift:boolean):string;
 	static keyDown(event:any):void;
 	static keyUp(event:any):void;
 	static keyPress(event:any):void;
@@ -124,12 +124,12 @@ export class SystemImpl {
 	static exitFullscreen():void;
 	static notifyOfFullscreenChange(func:any, error:any):void;
 	static removeFromFullscreenChange(func:any, error:any):void;
-	static changeResolution(width:any, height:any):void;
-	static setKeepScreenOn(on:any):void;
-	static loadUrl(url:any):void;
-	static getGamepadId(index:any):string;
+	static changeResolution(width:number, height:number):void;
+	static setKeepScreenOn(on:boolean):void;
+	static loadUrl(url:string):void;
+	static getGamepadId(index:number):string;
 	static getGamepads():Array<any>;
-	static getPen(num:any):khaModule.input.Pen;
+	static getPen(num:number):khaModule.input.Pen;
 
 
 }

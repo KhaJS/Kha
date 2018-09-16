@@ -9,44 +9,44 @@ export class Comment {
 	constructor();
 	data:Map;
 	title:string;
-	get_title():;
+	get_title():any;
 	
-	get_loopStart():;
+	get_loopStart():any;
 	
-	get_loopLength():;
+	get_loopLength():any;
 	version:string;
-	get_version():;
+	get_version():any;
 	album:string;
-	get_album():;
+	get_album():any;
 	organization:string;
-	get_organization():;
+	get_organization():any;
 	tracknumber:string;
-	get_tracknumber():;
+	get_tracknumber():any;
 	performer:string;
-	get_performer():;
+	get_performer():any;
 	copyright:string;
-	get_copyright():;
+	get_copyright():any;
 	license:string;
-	get_license():;
+	get_license():any;
 	artist:string;
-	get_artist():;
+	get_artist():any;
 	description:string;
-	get_description():;
+	get_description():any;
 	genre:string;
-	get_genre():;
+	get_genre():any;
 	date:string;
-	get_date():;
+	get_date():any;
 	location:string;
-	get_location():;
+	get_location():any;
 	contact:string;
-	get_contact():;
+	get_contact():any;
 	isrc:string;
-	get_isrc():;
+	get_isrc():any;
 	artists:Array<any>;
-	get_artists():;
-	add(key:any, value:any):void;
-	getString(key:any):;
-	getArray(key:any):;
+	get_artists():any;
+	add(key:string, value:string):void;
+	getString(key:string):any;
+	getArray(key:string):any;
 
 
 }

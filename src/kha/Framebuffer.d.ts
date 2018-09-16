@@ -6,12 +6,12 @@ declare namespace kha {
 
 export class Framebuffer {
 
-	constructor(windowId:any, g1:any, g2:any, g4:any);
+	constructor(windowId:number, g1:khaModule.graphics1.Graphics, g2:khaModule.graphics2.Graphics, g4:khaModule.graphics4.Graphics);
 	windowId:number;
 	graphics1:khaModule.graphics1.Graphics;
 	graphics2:khaModule.graphics2.Graphics;
 	graphics4:khaModule.graphics4.Graphics;
-	init(g1:any, g2:any, g4:any):void;
+	init(g1:khaModule.graphics1.Graphics, g2:khaModule.graphics2.Graphics, g4:khaModule.graphics4.Graphics):void;
 	g1:khaModule.graphics1.Graphics;
 	get_g1():khaModule.graphics1.Graphics;
 	g2:khaModule.graphics2.Graphics;

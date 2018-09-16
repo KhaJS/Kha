@@ -5,26 +5,26 @@ declare namespace kha.simd {
 
 export class Float32x4 {
 
-	constructor(_0:any, _1:any, _2:any, _3:any);
+	constructor(_0:khaModule.FastFloat, _1:khaModule.FastFloat, _2:khaModule.FastFloat, _3:khaModule.FastFloat);
 	
 	
 	
 	
 	static create():khaModule.simd.Float32x4;
-	static loadAllFast(t:any):khaModule.simd.Float32x4;
-	static load(a:any, b:any, c:any, d:any):khaModule.simd.Float32x4;
-	static loadFast(a:any, b:any, c:any, d:any):khaModule.simd.Float32x4;
-	static get(t:any, index:any):number;
-	static getFast(t:any, index:any):khaModule.FastFloat;
-	static abs(t:any):khaModule.simd.Float32x4;
-	static add(a:any, b:any):khaModule.simd.Float32x4;
-	static div(a:any, b:any):khaModule.simd.Float32x4;
-	static mul(a:any, b:any):khaModule.simd.Float32x4;
-	static neg(t:any):khaModule.simd.Float32x4;
-	static reciprocalApproximation(t:any):khaModule.simd.Float32x4;
-	static reciprocalSqrtApproximation(t:any):khaModule.simd.Float32x4;
-	static sub(a:any, b:any):khaModule.simd.Float32x4;
-	static sqrt(t:any):khaModule.simd.Float32x4;
+	static loadAllFast(t:khaModule.FastFloat):khaModule.simd.Float32x4;
+	static load(a:number, b:number, c:number, d:number):khaModule.simd.Float32x4;
+	static loadFast(a:khaModule.FastFloat, b:khaModule.FastFloat, c:khaModule.FastFloat, d:khaModule.FastFloat):khaModule.simd.Float32x4;
+	static get(t:khaModule.simd.Float32x4, index:number):number;
+	static getFast(t:khaModule.simd.Float32x4, index:number):khaModule.FastFloat;
+	static abs(t:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static add(a:khaModule.simd.Float32x4, b:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static div(a:khaModule.simd.Float32x4, b:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static mul(a:khaModule.simd.Float32x4, b:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static neg(t:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static reciprocalApproximation(t:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static reciprocalSqrtApproximation(t:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static sub(a:khaModule.simd.Float32x4, b:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
+	static sqrt(t:khaModule.simd.Float32x4):khaModule.simd.Float32x4;
 
 
 }

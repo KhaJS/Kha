@@ -8,7 +8,7 @@ export class Graphics {
 	
 	begin():void;
 	end():void;
-	setPixel(x:any, y:any, color:any):void;
+	setPixel(x:number, y:number, color:khaModule.Color):void;
 
 
 }

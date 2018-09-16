@@ -37,6 +37,7 @@ export { default as LoaderImpl } from "./LoaderImpl";
 export { default as Position } from "./Position";
 export { default as RendererOptions } from "./RendererOptions";
 export { default as Resource } from "./Resource";
+export { default as Scaler } from "./Scaler";
 export { default as Scheduler } from "./Scheduler";
 export { default as ScreenRotation } from "./ScreenRotation";
 export { default as Shaders } from "./Shaders";
@@ -44,6 +45,7 @@ export { default as Sound } from "./Sound";
 export { default as System } from "./System";
 export { default as SystemImpl } from "./SystemImpl";
 export { default as TargetDisplay } from "./TargetDisplay";
+export { default as TargetRectangle } from "./TargetRectangle";
 export { default as TimeTask } from "./TimeTask";
 export { default as Video } from "./Video";
 export { default as WebGLImage } from "./WebGLImage";
@@ -59,8 +61,9 @@ export namespace _Assets {
     export type VideoList = _AssetsProxy1.VideoList;
 }
 
-export type Color = _ColorProxy1.Color_Impl_;
-
+export namespace _Color {
+    export type Color_Impl_ = _ColorProxy1.Color_Impl_;
+}
 
 export namespace arrays {
     export namespace _Float32Array {
